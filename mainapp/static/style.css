@@ -1,1 +1,46 @@
-#test { color : green; }
+
+/***********  공통  ***************/
+/*
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "";
+}
+
+img {
+    max-width : 100%;
+}
+*/
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+/*nav*/
+#nav-list {
+    display: flex;
+    font-size: 1rem;
+    margin-top: 38px;
+    list-style: none;
+    color : blue;
+}
+#logo {
+    width: 200px;
+    height: 44;
+    margin-top: 38px;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+#test {
+    color : green;
+}
