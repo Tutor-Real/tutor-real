@@ -20,7 +20,7 @@ import mainapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.views.main, name='main'),
-    path('finance/', mainapp.views.finance, name='finance'),
-    path('house/', mainapp.views.house, name='house'),
-    path('welfare/', mainapp.views.welfare, name='welfare'),
+    path('finance/', mainapp.views.finance, name='finance'), #금융 페이지
+    path('house/', mainapp.views.house, name='house'), #주거 페이지
+    path('welfare/', mainapp.views.welfare, name='welfare'), #복지 페이지
 ]
