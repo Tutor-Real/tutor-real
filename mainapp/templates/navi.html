@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <!--font/noto sans-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='{% static "style.css" %}'/>
+    {% block head %}
+      
+    {% endblock head %}
+</head>
+<body>
+
+    <div id="home">
+        <nav class="navigation wrapper">
+            <a href="../"><img class="logo" src='{% static "tutoreal-logo.png"%}' alt="TUTOREAL"></a>
+            <ul class="nav-list">
+                <li><a href="">소개</a></li>
+                <li><a href="">달력</a></li>
+                <li><a href="finance">금융</a></li>
+                <li><a href="welfare">복지</a></li>
+                <li><a href="house">주거</a></li>
+            </ul>
+            <!-- search box -->
+            <div class="search-box">
+                <input type="search" id="search" placeholder="search...">
+                <span class="icon"><img src="search.png"></span>
+            </div>
+
+        </nav>
+    </div>
+    <main>
+        {% block content %}
+
+        {%endblock content%}
+    </main>
+</body>
+</html>
