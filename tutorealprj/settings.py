@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import configparser
+config = configparser.ConfigParser()
+config.read('database.ini')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -76,8 +80,12 @@ WSGI_APPLICATION = 'tutorealprj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',    
+        'NAME': config['DATABASE']['NAME'],                  
+        'USER': config['DATABASE']['USER'],                          
+        'PASSWORD': config['DATABASE']['PASSWORD'],                  
+        'HOST': config['DATABASE']['HOST'],                     
+        'PORT': config['DATABASE']['PORT'],  
     }
 }
 
