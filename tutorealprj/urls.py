@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.views.main, name='main'),
     path('finance/', mainapp.views.finance, name='finance'),
+    path('house/', mainapp.views.house, name='house'),
+    path('welfare/', mainapp.views.welfare, name='welfare'),
 ]

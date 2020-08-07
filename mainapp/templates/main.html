@@ -1,31 +1,64 @@
+{% extends 'navi.html'%}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUTOREAL</title>
+    {% block head %}
+      
+    {% endblock head %}
     <link rel='stylesheet' href='{% static "style.css" %}'/>
 </head>
 <body>
+{% block content %}
     <div id="home">
-        <nav id="navigation wrapper">
-            <a href="main.html"><img id="logo" src="" alt="TUTOREAL"></a>
-            <ul id="nav-list">
-                <li><a href="">소개</a></li>
-                <li><a href="">달력</a></li>
-                <li><a href="">금융</a></li>
-                <li><a href="">복지</a></li>
-                <li><a href="">주거</a></li>
-            </ul>
-            <!-- search box -->
-        </nav>
-
-        <header>
+        <header id="home-header">
+            <div class="frame"></div>
+            <div class="main-img">
+                <!--img-->
+            </div>
+            <div class="frame"></div>
         </header>
         
-        <div>
+        <div id="home-contents" class="wrapper">
 
+            <div class="contents-header"> <!--이름을 다시 지어보자...-->
+                <div class="title">
+                    <div></div>
+                    <a href="#"></a><span>이 달의 튜터리얼!</span></a>
+                </div>
+                <span class="more">더보기..</span>
+            </div>
+        
+            <div class="contents">
+                <div class="item">
+                    <img class="img">
+                    <p class="title">TITLE</p>
+                    <div class="explain">
+                        <p class="ex">example</p>
+                        <p>2020.08.08</p>
+                    </div>
+                </div>
+        
+                <div class="item">
+                    <img class="img">
+                    <p class="title">TITLE</p>
+                    <div class="explain">
+                        <p class="ex">example</p>
+                        <p>2020.08.08</p>
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <img class="img">
+                    <p class="title">TITLE</p>
+                    <div class="explain">
+                        <p class="ex">example</p>
+                        <p>2020.08.08</p>
+                    </div>
+                </div>
+            
+            </div>
+        
         </div>
 
         <footer>
@@ -33,5 +66,7 @@
         </footer>
 
     </div> <!--end home-->
+
+{%endblock content%}
 </body>
 </html>

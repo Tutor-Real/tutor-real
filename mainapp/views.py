@@ -7,3 +7,9 @@ def main(request):
 
 def finance(request):
     return render(request, 'finance.html')
+
+def welfare(request):
+    return render(request, 'welfare.html')
+
+def house(request):
+    return render(request, 'house.html')
