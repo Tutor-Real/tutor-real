@@ -84,6 +84,15 @@ a {text-decoration: none;}
     min-height: 680px;
 }
 
+.carousel-inner{
+    height: 680px;
+}
+
+.carousel .carousel-indicators li {
+   width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
 
 /*home-contents*/
 
