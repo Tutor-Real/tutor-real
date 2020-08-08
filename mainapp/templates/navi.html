@@ -8,6 +8,20 @@
     <!--font/noto sans-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='{% static "style.css" %}'/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+		$(document).ready(function(){
+			$(".default_option").click(function(){
+			  $(this).parent().toggleClass("active");
+			})
+
+			$(".select_ul li").click(function(){
+			  var currentele = $(this).html();
+			  $(".default_option li").html(currentele);
+			  $(this).parents(".select_wrap").removeClass("active");
+			})
+		});
+	</script> 
     {% block head %}
       
     {% endblock head %}
@@ -27,7 +41,7 @@
             <!-- search box -->
             <div class="search-box">
                 <input type="search" id="search" placeholder="search...">
-                <span class="icon"><img src="search.png"></span>
+                <span class="icon"><img src="#"></span>
             </div>
 
         </nav>
