@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro</title>
     <!--font/noto sans-->
+
+    {% block head %}
+    {% endblock head %}
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='{% static "style.css" %}'/>
+    <link rel='stylesheet' href='{% static "css/style.css" %}'/> <!-- 우선시 되야 할 css-->
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script>
 		$(document).ready(function(){
@@ -22,39 +27,79 @@
 			})
 		});
 	</script> 
-    
-    <!-- bootstrap4-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    {% block head %}
-      
-    {% endblock head %}
 </head>
 <body>
-
     <div id="home">
         <nav class="navigation wrapper">
-            <a href="../"><img class="logo" src='{% static "tutoreal-logo.png"%}' alt="TUTOREAL"></a>
+            <a href="../"><img class="logo" src='{% static "img/tutoreal-logo.png" %}' alt="TUTOREAL"></a>
             <ul class="nav-list">
-                <li><a href="">소개</a></li>
-                <li><a href="">달력</a></li>
-                <li><a href="{% url 'finance' %}">금융</a></li>
-                <li><a href="{% url 'welfare' %}">복지</a></li>
-                <li><a href="{% url 'house' %}">주거</a></li>
+                <li><a id="nav_introduce" href="" onmouseover="hover(this)" onmouseout="out(this)">소개</a></li>
+                <li><a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a></li>
+                <li><a id="nav_finance" href="{% url 'finance' %}" onmouseover="hover(this)" onmouseout="out(this)">금융</a></li>
+                <li><a id="nav_welfare" href="{% url 'welfare' %}" onmouseover="hover(this)" onmouseout="out(this)">복지</a></li>
+                <li><a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a></li>
             </ul>
             <!-- search box -->
             <div class="search-box">
                 <input type="search" id="search" placeholder="search...">
                 <span class="icon"><img src=""></span>
             </div>
-
         </nav>
     </div>
+
+    <script>
+        let nav_finance = document.getElementById("nav_finance");
+        let nav_welfare = document.getElementById("nav_welfare");
+        let nav_house = document.getElementById("nav_house");
+
+        console.log(nav_finance.innerHTML);
+        console.log(nav_welfare.innerHTML);
+        console.log(nav_house.innerHTML);
+
+        let link = document.location.pathname;
+        console.log(link);
+        console.log(typeof link);
+
+        function hover(obj){
+            obj.style.color="#5FFCE7";
+        }
+
+         switch(link){
+            case '/finance/':
+                nav_introduce.style.color="#B2B2B2" //소개 blur
+                nav_calendar.style.color="#B2B2B2" //달력 blur
+                nav_welfare.style.color="#B2B2B2" //복지 blur
+                nav_house.style.color="#B2B2B2" //주거 blur
+                break;
+            case '/welfare/':
+                nav_introduce.style.color="#B2B2B2" //소개 blur
+                nav_calendar.style.color="#B2B2B2" //달력 blur
+                nav_finance.style.color="#B2B2B2" //금융 blur
+                nav_house.style.color="#B2B2B2" //주거 blur
+                break;
+            case '/house/':
+                nav_introduce.style.color="#B2B2B2" //소개 blur
+                nav_calendar.style.color="#B2B2B2" //달력 blur
+                nav_finance.style.color="#B2B2B2" //금융 blur
+                nav_welfare.style.color="#B2B2B2" //복지 blur
+                break;
+        }
+
+        function out(obj){
+            if(link=='/finance/'){//금융일때
+                obj.id=="nav_finance" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
+            }else if(link=='/welfare/'){//복지일때
+                obj.id=="nav_welfare" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
+            }else if(link=='/house/'){//주거일때
+                obj.id=="nav_house" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
+            }else{
+                obj.style.color="#3B48F2";
+            }
+        }
+    </script>
+
     <main>
         {% block content %}
-
         {%endblock content%}
     </main>
 </body>
