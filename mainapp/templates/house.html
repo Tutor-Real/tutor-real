@@ -7,13 +7,11 @@
       
     {% endblock head %}
 </head>
+
 <body>
 {% block content %}
-        <header id="home-header">
-
-        </header>
-        
-        <div id="finance-contents" class="wrapper">
+    <header>
+       <div id="finance-contents" class="wrapper">
 
             <div class="contents-header">
                 <div class="title">
@@ -52,25 +50,27 @@
             </div>
 
             <hr>
+    </header>
 
-            <div class="contents">
-                <div class="item">
-                    <img class="img">
-                    <p class="title">TITLE</p>
+    <div class="contents wrapper">
+        <div class="item">
+            <a href="../"> <!--컨텐츠 세부페이지로 이동-->
+                <img class="img">
+                <p class="title">TITLE</p>
                     <div class="explain">
-                        <p class="ex">example</p>
-                        <p>2020.08.08</p>
-                    </div>
+                    <p>example</p>
+                    <p class="date">2020.08.08</p>
                 </div>
+            </a>
+        </div>
             
-            </div>
+    </div>
 
-        </div>
 
-        <footer>
+    <footer>
 
-        </footer>
-        </div>
+    </footer>
+    
 {%endblock content%}
 </body>
 </html>
