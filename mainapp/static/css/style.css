@@ -4,6 +4,7 @@
 
 html {
     font-size: 100%;
+    /*스크롤 영역 따로 빼기*/
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
 }
@@ -13,8 +14,12 @@ body {
     color : black;
     margin: 0;
 }
-img { max-width : 100%;}
-a {text-decoration: none;}
+img { 
+    max-width : 100%;
+}
+a {
+    text-decoration: none;
+}
 
 .wrapper {
     max-width: 1520px;
@@ -34,6 +39,7 @@ a {text-decoration: none;}
     letter-spacing: 0px;
 }
 .nav-list a {
+    text-decoration: none;
     color : #3B48F2;
 }
 .nav-list a:hover {
@@ -41,7 +47,7 @@ a {text-decoration: none;}
 }
 
 .logo {
-    width: 200px;
+    width: 181px;
     height: 44px;
     margin: 38px auto;
 }
@@ -59,7 +65,7 @@ a {text-decoration: none;}
     border-radius: 15px;
     margin: 38px 78px;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     
 }
 
@@ -77,6 +83,8 @@ a {text-decoration: none;}
 
 
 /*home-header*/
+
+
 #home-navi{
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -84,18 +92,15 @@ a {text-decoration: none;}
     background-color: #3B48F2;
     height: 60px;
 }
-.main-img {
-    background-color: #B2B2B2; /*나중에 background img로 변경*/
-    background-size: cover;
-    min-height: 680px;
-}
 
+
+/*img slider*/
 .carousel-inner{
     height: 680px;
 }
 
 .carousel .carousel-indicators li {
-   width: 10px;
+    width: 10px;
   height: 10px;
   border-radius: 100%;
 }
@@ -113,7 +118,7 @@ a {text-decoration: none;}
 
 .title span{
     font-weight: 900;
-    font-size: 60px;
+    font-size: 3.75rem;
     letter-spacing: 0px;
     color: #3B48F2;
     margin-left: 8px;
@@ -129,7 +134,7 @@ a {text-decoration: none;}
 }
 
 .more {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     padding-top: 45px;
 }
@@ -147,7 +152,7 @@ a {text-decoration: none;}
     border-radius: 15px;
 }
 .item .title{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     margin: 20px 20px 9px;
 }
@@ -160,7 +165,7 @@ a {text-decoration: none;}
 .explain p {
     font-weight: normal;
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 1.125rem;
     color : #B2B2B2;
 }
 
@@ -179,7 +184,7 @@ a {text-decoration: none;}
 }
 
 .title .sub-bg {
-    width: 126px;
+    width: 215px;
 }
 
 /*SELECT BAR TEST*/
@@ -194,7 +199,7 @@ a {text-decoration: none;}
     user-select: none;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
 .select_wrap .default_option{
