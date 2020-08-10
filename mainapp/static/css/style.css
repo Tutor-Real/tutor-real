@@ -68,13 +68,15 @@ a {
     border-radius: 15px;
     margin: 38px 78px;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 1rem;
+    
 }
 
+.search-box .icon {
+    position: absolute;
+    z-index: 1;
 
-
-.nav-list a:hover { text-decoration:none !important } 
-
+}
 
 
 .navigation { /* nav-list + logo + search */
