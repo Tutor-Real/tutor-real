@@ -9,9 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
-    {% endblock head %}
-    <link rel='stylesheet' href='{% static "style.css" %}'/>
-    
+    {% endblock head %}  
 </head>
 <body>
 {% block content %}
@@ -66,14 +64,14 @@
                     <div></div>
                     <a href="#"></a><span>이 달의 튜터리얼!</span></a>
                 </div>
-                <span class="more">더보기..</span>
+                <span class="more">더보기..</span> <!-- 이 달의 튜터리얼 페이지로 이동-->
             </div>
         
             <div class="contents">
                 
                 <div class="item">
-                    <a href="../">
-                     <!--이달의 컨텐츠로 이동-->
+                    <a href="{% url 'post'%}">
+                     <!--해당 컨텐츠 세부페이지로 이동-->
                         <img class="img">
                         <p class="title">TITLE</p>
                         <div class="explain">
@@ -84,8 +82,8 @@
                 </div>
                 
                 <div class="item">
-                    <a href="../">
-                     <!--이달의 컨텐츠로 이동-->
+                    <a href="{% url 'post'%}">
+                     <!--해당 컨텐츠 세부페이지로 이동-->
                         <img class="img">
                         <p class="title">TITLE</p>
                         <div class="explain">
@@ -96,8 +94,8 @@
                 </div>
 
                 <div class="item">
-                    <a href="../">
-                     <!--이달의 컨텐츠로 이동-->
+                    <a href="{% url 'post'%}">
+                     <!--해당 컨텐츠 세부페이지로 이동-->
                         <img class="img">
                         <p class="title">TITLE</p>
                         <div class="explain">

@@ -23,4 +23,5 @@ urlpatterns = [
     path('finance/', mainapp.views.finance, name='finance'), #금융 페이지
     path('house/', mainapp.views.house, name='house'), #주거 페이지
     path('welfare/', mainapp.views.welfare, name='welfare'), #복지 페이지
+    path('post/', mainapp.views.post, name='post'), #세부 페이지
 ]

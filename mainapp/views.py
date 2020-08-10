@@ -13,3 +13,6 @@ def welfare(request):
 
 def house(request):
     return render(request, 'house.html')
+
+def post(request):
+    return render(request, 'post.html')
