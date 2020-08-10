@@ -2,7 +2,11 @@
 
 /***********  공통  ***************/
 
-html {font-size: 100%;}
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
 body {
     font-family: 'Noto Sans', sans-serif;
     font-family: 'Noto Sans KR', sans-serif;
