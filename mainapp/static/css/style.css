@@ -65,15 +65,13 @@ a {
     border-radius: 15px;
     margin: 38px 78px;
     padding-left: 20px;
-    font-size: 1rem;
-    
+    font-size: 16px;
 }
 
-.search-box .icon {
-    position: absolute;
-    z-index: 1;
 
-}
+
+.nav-list a:hover { text-decoration:none !important } 
+
 
 
 .navigation { /* nav-list + logo + search */
@@ -173,13 +171,6 @@ a {
     color : black;
 }
 
-.item:hover {
-    color : #5FFCE7;
-}
-
-.item:hover .ex{
-        color : #5FFCE7;
-}
 
 /************************** finance-contents*/
 *{
