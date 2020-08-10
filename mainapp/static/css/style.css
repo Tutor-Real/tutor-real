@@ -17,9 +17,7 @@ body {
 img { 
     max-width : 100%;
 }
-a {
-    text-decoration: none;
-}
+
 
 .wrapper {
     max-width: 1520px;
@@ -38,7 +36,9 @@ a {
     font-weight: 900;
     letter-spacing: 0px;
 }
-.nav-list a {
+
+
+ .nav-list a {
     text-decoration: none;
     color : #3B48F2;
 }
@@ -144,6 +144,15 @@ a {
     margin-top: 60px;
 }
 
+.item a{
+    color:black;
+}
+.item a:hover{
+    text-decoration: none;
+    color: #5FFCE7;
+}
+
+
 .item img{
     background-color: gray;
     width: 480px; height: 270px;
@@ -163,12 +172,11 @@ a {
 .explain p {
     font-weight: normal;
     margin: 0 20px;
-    font-size: 1.125rem;
-    color : #B2B2B2;
+    font-size: 1.125rem;   
 }
 
-.explain .ex {
-    color : black;
+.explain .date {
+    color : #B2B2B2;
 }
 
 
