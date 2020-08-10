@@ -10,13 +10,10 @@
 </head>
 <body>
 {% block content %}
-        <header id="home-header">
-
-        </header>
-        
+    <header>
         <div id="finance-contents" class="wrapper">
 
-            <div class="contents-header"> <!--이름을 다시 지어보자...-->
+            <div class="contents-header"> 
                 <div class="title">
                     <div class="sub-bg"></div>
                     <a href="#"></a><span>복지 🤝</span></a>
@@ -53,25 +50,26 @@
             </div>
 
             <hr>
+    </header>
 
-            <div class="contents">
-                <div class="item">
-                    <img class="img">
-                    <p class="title">TITLE</p>
-                    <div class="explain">
-                        <p class="ex">example</p>
-                        <p>2020.08.08</p>
-                    </div>
+    <div class="contents wrapper">
+        <div class="item">
+        <a href="../"> <!--컨텐츠 세부페이지로 이동-->
+            <img class="img">
+                <p class="title">TITLE</p>
+                <div class="explain">
+                    <p>example</p>
+                    <p class="date">2020.08.08</p>
                 </div>
-            
-            </div>
-
+            </a>
         </div>
+    </div>
 
-        <footer>
 
-        </footer>
-        </div>
+    <footer>
+
+    </footer>
+
 {%endblock content%}
 </body>
 </html>
