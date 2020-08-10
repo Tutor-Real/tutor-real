@@ -18,6 +18,9 @@ img {
     max-width : 100%;
 }
 
+a {
+    text-decoration: none;
+}
 
 .wrapper {
     max-width: 1520px;
@@ -38,7 +41,7 @@ img {
 }
 
 
- .nav-list a {
+.nav-list a {
     text-decoration: none;
     color : #3B48F2;
 }
@@ -146,7 +149,8 @@ img {
     margin-top: 60px;
 }
 
-.item a{
+
+.item a {
     color:black;
 }
 .item a:hover{
