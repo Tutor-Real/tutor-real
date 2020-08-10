@@ -56,14 +56,12 @@ a {text-decoration: none;}
     margin: 38px 78px;
     padding-left: 20px;
     font-size: 16px;
-    
 }
 
-.search-box .icon {
-    position: absolute;
-    z-index: 1;
 
-}
+
+.nav-list a:hover { text-decoration:none !important } 
+
 
 
 .navigation { /* nav-list + logo + search */
