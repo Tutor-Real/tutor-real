@@ -6,7 +6,6 @@
     {% block head %}
       
     {% endblock head %}
-    <link rel='stylesheet' href='{% static "style.css" %}'/>
 </head>
 <body>
 {% block content %}
@@ -54,7 +53,7 @@
 
     <div class="contents wrapper">
         <div class="item">
-        <a href="../"> <!--컨텐츠 세부페이지로 이동-->
+        <a href="{% url 'post'%}"> <!--컨텐츠 세부페이지로 이동-->
             <img class="img">
                 <p class="title">TITLE</p>
                 <div class="explain">
