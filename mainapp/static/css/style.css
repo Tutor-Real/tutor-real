@@ -286,3 +286,36 @@ a {
 
 
 /* 0807 1차 merge*/
+
+/*****************************post*/
+
+.post-page {
+    max-width: 1444px;
+    margin: 60px auto;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.post-wrapper {
+    padding: 40px;
+}
+
+.title .post-bg {
+    width: 237px;
+}
+
+
+.post-img {
+    width: 1364px;
+    height: 380px;
+    background-color: #0F1236;
+    color: white;
+    text-align: center;
+}
+
+.post-img h1 {
+    font-size: 3.75rem;
+    font-weight: 900;
+}
+.post-img p {
+    font-size: 1.125rem;
+}
