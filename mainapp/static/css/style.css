@@ -297,8 +297,26 @@ a {
     padding: 40px;
 }
 
+/*  header 안에 post-header(title-box + function-box) + post-img */
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.function-box {
+    margin-top: 60px;
+    text-align: right;
+}
+
 .title .post-bg {
     width: 237px;
+}
+
+.title-box h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 8px 10px 38px;
 }
 
 
@@ -308,23 +326,47 @@ a {
     background-color: #0F1236;
     color: white;
     text-align: center;
-    line-height: 40px;
+    line-height: 60px;
 }
 
-.post-img .img-text {
-    padding-top: 60px;
+.img-text {
+    padding-top: 80px;
 }
 
 .post-img h1 {
     font-size: 3.75rem;
     font-weight: 900;     
 }
+
 .post-img p {
     font-size: 1.125rem;
     font-weight: 100;
+    margin-top: 10px;
 }
 
 .post-page hr {
     margin: 40px auto 60px ;
     border: 1px solid #1d258d56; /*1px 미만은 적용이 안되니까 투명도로 비슷한 효과 내기*/
 }
+
+.post-contents {
+    text-align: center;
+}
+
+.post-logo {
+    margin-bottom: 68px;
+}
+.title .contents-bg {
+    width: 237px;
+    left: 50%;
+}
+
+.post-contents .title-box {
+    margin-bottom: 20px;
+}
+
+.post-contents p {
+    line-height: 1rem;
+    font-size: 1.125rem;
+}
+
