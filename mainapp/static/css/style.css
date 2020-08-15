@@ -145,6 +145,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    margin-bottom: 80px;
 }
 
 
@@ -316,4 +317,32 @@ a {
 }
 .post-img p {
     font-size: 1.125rem;
+}
+
+/*footer*/
+
+#footer{
+    background-color: #3B48F2;
+    height: 230px; 
+
+}
+
+.footer-wrapper{
+    display: flex;  
+    color: #FFFFFF;
+    padding-top:65px;
+}
+.flogo{
+    width : 100px;
+    height: 98px;
+    margin-top : 5px;
+}
+
+.footer-detail{
+    justify-content: space-between;
+    display: flex;
+    text-align: justify;
+    width: 1300px;
+    height: 98px;
+    margin-left: 20px;
 }
