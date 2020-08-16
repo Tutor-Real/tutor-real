@@ -36,7 +36,7 @@
 <body>
     <div id="home-navi">
         <nav class="navigation wrapper">
-            <a href="../"><img class="logo" src='{% static "img/tutoreal-logo.png" %}' alt="TUTOREAL"></a>
+            <a href="../"><img class="logo" src='{% static "img\tutor-real-logo_3.png" %}' alt="TUTOREAL"></a>
             <ul class="nav-list">
                 <li><a id="nav_introduce" href="" onmouseover="hover(this)" onmouseout="out(this)">소개</a></li>
                 <li><a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a></li>
@@ -107,5 +107,27 @@
         {% block content %}
         {%endblock content%}
     </main>
+
+    <footer>
+        <div id="footer">       
+            <nav class="footer-wrapper wrapper">       
+                <img class="flogo" src='{% static "img/footer-logo.png" %}' alt="FOOTER"></a>
+                <div class="footer-detail">
+                    <div >
+                        <p>팀명 : 튜터리얼</p>
+                        <p>대표메일 : xxxxx@naver.com</p>
+                        <img class="insta" src='{% static "img/instagram.png" %}' alt="INSTAGRAM">　@tutor__real</a>
+                    </div>
+                    <div>
+                        <p>이용 약관 및 정책 │ 고객문의 │ 광고문의</p>
+                    </div>  
+                    <div>
+                        <p>멋쟁이 사자처럼 8기</p>
+                        <p>서울특별시 강남구 봉은사로 82길 13</p>
+                    </div>  
+                </div>  
+            </nav>      
+        </div>
+    </footer>
 </body>
 </html>
