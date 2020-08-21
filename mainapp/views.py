@@ -16,3 +16,6 @@ def house(request):
 
 def post(request):
     return render(request, 'post.html')
+
+def intro(request):
+    return render(request, 'intro.html')
