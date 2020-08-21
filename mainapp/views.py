@@ -1,4 +1,12 @@
 from django.shortcuts import render
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from datetime import datetime, timedelta
+import sys
+from oauth2client import client
+from googleapiclient import sample_tools
+# pip install google-api-python-client
+# pip install oauth2client
 
 # Create your views here.
 
@@ -16,3 +24,7 @@ def house(request):
 
 def post(request):
     return render(request, 'post.html')
+
+def calendar(request):
+    
+    return render(request, 'calendar.html')
