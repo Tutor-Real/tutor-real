@@ -28,15 +28,21 @@ a {
 /*nav*/
 .nav-list {
     display: flex;
-    margin: 42px auto;
     list-style: none;
 }
 .nav-list li{
-    margin-left: 94px;
     font-size : 1.5rem;
     font-weight: 900;
     letter-spacing: 0px;
+    white-space: nowrap;
 }
+
+.navbar-nav{
+    display: flex;
+    list-style: none;
+}
+
+
 
 
 .nav-list a {
@@ -78,6 +84,11 @@ a {
 
 
 .navigation { /* nav-list + logo + search */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
     display: flex;
     justify-content: space-between;
 }
@@ -316,4 +327,40 @@ a {
 }
 .post-img p {
     font-size: 1.125rem;
+}
+
+/* nav바 적용하면서 추가한 css들*/
+.container-xl{
+    margin-right : 40px !important;
+    margin-left : 40px !important;
+    max-width: 100% !important;
+}
+
+.form-control{
+    height : 44px !important;
+    width : 260px !important;
+    border : 2px solid #3B48F2 !important;
+    border-radius: 15px !important;
+    font-size : 1rem !important;
+}
+
+.navbar-nav{
+    margin-left : 20px !important;
+    width : 100%;
+    margin-bottom: 10px !important;
+    display: flex;
+}
+
+.form-control{
+    margin-left : 30px !important;
+}
+/* nav바 적용하면서 추가한 css들 end*/
+
+.liw{
+    flex: 1;
+    margin-top: 10px;
+}
+
+.logo{
+    margin-right : 100px;
 }
