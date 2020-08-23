@@ -39,7 +39,7 @@
         <!-- bootstrap으로 추가한 nav start -->
         <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container-xl">
-            <a class="navbar-brand" href="{% url 'main' %}"><img class="logo" src='{% static "img/tutoreal-logo.png" %}' alt="TUTOREAL"></a>
+            <a class="navbar-brand" href="{% url 'main' %}"><img class="logo" src='{% static "img\tutor-real-logo_3.png" %}' alt="TUTOREAL"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="nav-item liw">
                 <a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a>
-                </li>
+              </li>
             </ul>
             </div>
             <form class="form-inline my-2 my-md-0">
@@ -129,5 +129,27 @@
         {% block content %}
         {%endblock content%}
     </main>
+
+    <footer>
+        <div id="footer">       
+            <nav class="footer-wrapper wrapper">       
+                <img class="flogo" src='{% static "img/footer-logo.png" %}' alt="FOOTER"></a>
+                <div class="footer-detail">
+                    <div >
+                        <p>팀명 : 튜터리얼</p>
+                        <p>대표메일 : xxxxx@naver.com</p>
+                        <img class="insta" src='{% static "img/instagram.png" %}' alt="INSTAGRAM">　@tutor__real</a>
+                    </div>
+                    <div>
+                        <p>이용 약관 및 정책 │ 고객문의 │ 광고문의</p>
+                    </div>  
+                    <div>
+                        <p>멋쟁이 사자처럼 8기</p>
+                        <p>서울특별시 강남구 봉은사로 82길 13</p>
+                    </div>  
+                </div>  
+            </nav>      
+        </div>
+    </footer>
 </body>
 </html>

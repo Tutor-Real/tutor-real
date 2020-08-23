@@ -5,26 +5,105 @@
 <head>
     {% block head %}
       
-    {% endblock head %}
+    {% endblock head %}   
+    
 </head>
 <body>
 {% block content %}
     
     <div class="post-page">
         <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
-            <div class="title">
-                <div class="post-bg"></div>
-                <a href="#"></a><span>연말정산</span></a>
-            </div>
-            <h2>#13월의 월급, 알바생도 받을 수 있다!</h2>
+            
+            <div class="post-header">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="post-bg"></div>
+                        <a href="#"></a><span>연말정산</span></a>
+                    </div>
+                    <h2>#13월의 월급, 알바생도 받을 수 있다!</h2>
+                </div>
+                
+                <div class="function-box">
+
+                    <!--date, 조회순, url복사-->
+                    <p id="sh-link">URL 복사</p>
+                    <div class="post-value">
+                        <span class="date">📅 2020.00.00  </span>
+                        <span class="views">  👀 0000</span>
+                    </div>
+
+                </div>
+            
+            </div> 
+            
             <div class="post-img"> <!--img로 넣을지 box로 넣을지-->
-                <h1>알바생도 받을 수 있는</h1>
-                <h1>13월의 월급!</h1>
-                <p>#연말정산 #원천징수 #야너도_받을_수_있어</p>
-            </div>
+                <div class="img-text">
+                    <h1>알바생도 받을 수 있는</h1>
+                    <h1>13월의 월급!</h1>
+                    <p>#연말정산 #원천징수 #야너도_받을_수_있어</p>
+                </div>
+            </div> <!--end img-->
+
+            <hr>
+
         </header>
 
+        <div class="post-contents">
+
+            <img class="post-logo" src='{% static "img\tutor-real-logo_3_2.png" %}' alt="TUTOREAL">
+
+            <div class="title-box">
+                <div class="title">
+                    <div class="contents-bg"></div>
+                    <span>연말정산</span>
+                </div>
+                <h2>'13월의 월급'</h2>
+            </div>
+
+            <p>국세청에서 1년 동안 간이세액표에 따라 거둬들인 근로소득세를 연말에 다시 따져보고,</p>
+            <p>실소득보다 많은 세금을 냈으면 그만큼을 돌려주고 적게 거뒀으면 더 징수한는 절차</p>
+        </div>
+
     </div>
+
+    <!-- URL 복사 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#sh-link", function(e) { 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'); 
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html); var input_clip = document.getElementById("clip_target"); 
+        //현재 url 가져오기
+        var _url = $(location).attr('href'); 
+        $("#clip_target").val(_url);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { var editable = input_clip.contentEditable;
+        var readOnly = input_clip.readOnly; 
+        input_clip.contentEditable = true; 
+        input_clip.readOnly = false; 
+        var range = document.createRange(); 
+        range.selectNodeContents(input_clip); 
+        var selection = window.getSelection(); 
+        selection.removeAllRanges(); 
+        selection.addRange(range); 
+        input_clip.setSelectionRange(0, 999999); 
+        input_clip.contentEditable = editable; 
+        input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+            alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요."); 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+        } else { 
+        alert('이 브라우저는 지원하지 않습니다.'); 
+        } } catch (err) {
+            alert('이 브라우저는 지원하지 않습니다.');
+            } }); //클립보드 복사
+    </script>
 
 {%endblock content%}    
 </body>
