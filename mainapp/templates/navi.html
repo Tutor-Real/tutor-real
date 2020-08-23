@@ -31,25 +31,47 @@
 			  $(this).parents(".select_wrap").removeClass("active");
 			})
 		});
-	</script> 
+	</script>
+
 </head>
 <body>
     <div id="home-navi">
-        <nav class="navigation wrapper">
-            <a href="../"><img class="logo" src='{% static "img\tutor-real-logo_3.png" %}' alt="TUTOREAL"></a>
-            <ul class="nav-list">
-                <li><a id="nav_introduce" href="" onmouseover="hover(this)" onmouseout="out(this)">소개</a></li>
-                <li><a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a></li>
-                <li><a id="nav_finance" href="{% url 'finance' %}" onmouseover="hover(this)" onmouseout="out(this)">금융</a></li>
-                <li><a id="nav_welfare" href="{% url 'welfare' %}" onmouseover="hover(this)" onmouseout="out(this)">복지</a></li>
-                <li><a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a></li>
+        <!-- bootstrap으로 추가한 nav start -->
+        <nav class="navbar navbar-expand-xl navbar-light">
+        <div class="container-xl">
+            <a class="navbar-brand" href="{% url 'main' %}"><img class="logo" src='{% static "img\tutor-real-logo_3.png" %}' alt="TUTOREAL"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample07XL">
+            <div class="container-fluid">
+            <ul class="row navbar-nav nav-list">
+                <li class="nav-item liw">
+                <a id="nav_introduce" href="" onmouseover="hover(this)" onmouseout="out(this)">소개</a>
+                </li>
+                <li class="nav-item liw">
+                <a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a>
+                </li>
+                <li class="nav-item liw">
+                <a id="nav_finance" href="{% url 'finance' %}" onmouseover="hover(this)" onmouseout="out(this)">금융</a>
+                </li>
+                <li class="nav-item liw">
+                <a id="nav_welfare" href="{% url 'welfare' %}" onmouseover="hover(this)" onmouseout="out(this)">복지</a>
+                </li>
+                <li class="nav-item liw">
+                <a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a>
+              </li>
             </ul>
-            <!-- search box -->
-            <div class="search-box">
-                <input type="search" id="search" placeholder="search...">
-                <span class="icon"><img src=""></span>
             </div>
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="search..." aria-label="search">
+            </form>
+            </div>
+        </div>
         </nav>
+        <!-- bootstrap으로 추가한 nav end -->
+        
     </div>
 
     <script>
