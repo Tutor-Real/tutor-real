@@ -212,7 +212,7 @@ a {
 /*SELECT BAR TEST*/
 
 #sort{
-    margin-top: 10px;
+    margin-top: 35px;
     margin-right: 20px;
 }
 
@@ -234,7 +234,8 @@ a {
   }
 
 .select_wrap .default_option li{
-    background:#fff;
+    margin-top:16px;
+    padding-left : 15px;
     width: 180px;
     height: 20px;
     transform: translate(-10%,-50%);
@@ -253,12 +254,13 @@ a {
   }
   .select_wrap .select_ul{
     position: absolute;
-    top: 31px;
+    top: 45px;
     left: 0;
     width: 200px;
     background: #fff;
     border: 1px solid #3B48F2;
     display: none;
+    padding-top: 10px;
   }
 .select_wrap .select_ul li{
     cursor: pointer;
@@ -387,12 +389,15 @@ a {
 }
 
 .logo{
-    margin-right : 100px;
-  
   /* nav바 적용하면서 추가한 css들 end*/
 
     font-weight: 100;
     margin-top: 32px;
+}
+
+#imgpadding{
+    margin-left : 30px;
+    margin-right : 120px;
 }
 
 .post-page hr {
