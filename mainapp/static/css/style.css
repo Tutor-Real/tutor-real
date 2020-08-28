@@ -42,9 +42,6 @@ a {
     list-style: none;
 }
 
-
-
-
 .nav-list a {
     text-decoration: none;
     color : #3B48F2;
@@ -143,12 +140,6 @@ a {
     width: 455px;
     height: 28px;
     position: absolute;
-}
-
-.more {
-    font-size: 1.125rem;
-    font-weight: bold;
-    padding-top: 45px;
 }
 
 
@@ -296,9 +287,6 @@ a {
     border: 1px solid #3B48F2;
 }
 
-
-/* 0807 1차 merge*/
-
 /*****************************post*/
 
 .post-page {
@@ -388,17 +376,12 @@ a {
     margin-top: 10px;
 }
 
-.logo{
-  /* nav바 적용하면서 추가한 css들 end*/
-
-    font-weight: 100;
-    margin-top: 32px;
-}
-
 #imgpadding{
-    margin-left : 30px;
     margin-right : 120px;
 }
+/* nav바 적용하면서 추가한 css들 end*/
+
+
 
 .post-page hr {
     margin: 40px auto 60px ;
