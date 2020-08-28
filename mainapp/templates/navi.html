@@ -36,7 +36,17 @@
 </head>
 <body>
     <div id="home-navi">
-        <!-- bootstrap으로 추가한 nav start -->
+{% comment %} <<<<<<< HEAD {% endcomment %}
+        {% comment %} <nav class="navigation wrapper">
+            <a href="../"><img class="logo" src='{% static "img\tutor-real-logo_3.png" %}' alt="TUTOREAL"></a>
+            <ul class="nav-list">
+                <li><a id="nav_introduce" href="{% url 'intro' %}" onmouseover="hover(this)" onmouseout="out(this)">소개</a></li>
+                <li><a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a></li>
+                <li><a id="nav_finance" href="{% url 'finance' %}" onmouseover="hover(this)" onmouseout="out(this)">금융</a></li>
+                <li><a id="nav_welfare" href="{% url 'welfare' %}" onmouseover="hover(this)" onmouseout="out(this)">복지</a></li>
+                <li><a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a></li>
+=======
+        <!-- bootstrap으로 추가한 nav start --> {% endcomment %}
         <nav class="navbar navbar-expand-xl navbar-light">
         <div class="container-xl">
             <div id="imgpadding">
@@ -51,7 +61,7 @@
             <div class="container-fluid">
             <ul class="row navbar-nav nav-list">
                 <li class="nav-item liw">
-                <a id="nav_introduce" href="" onmouseover="hover(this)" onmouseout="out(this)">소개</a>
+                <a id="nav_introduce" href="{% url 'intro' %}" onmouseover="hover(this)" onmouseout="out(this)">소개</a>
                 </li>
                 <li class="nav-item liw">
                 <a id="nav_calendar" href="" onmouseover="hover(this)" onmouseout="out(this)">달력</a>
@@ -65,6 +75,7 @@
                 <li class="nav-item liw">
                 <a id="nav_house" href="{% url 'house' %}" onmouseover="hover(this)" onmouseout="out(this)">주거</a>
               </li>
+{% comment %} >>>>>>> 11649b3f9bcfed211e7002bf1da2880da1a0f1d9 {% endcomment %}
             </ul>
             </div>
             <form class="form-inline my-2 my-md-0">
