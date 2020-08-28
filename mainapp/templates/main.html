@@ -6,10 +6,18 @@
     {% block head %}
     
     {% endblock head %}  
-
+    <script>
+        alert("경고!")
+    </script>
 </head>
 <body>
 {% block content %}
+<script>
+    window.onload = function() {
+        alert("🚨주의🚨\n 이 사이트는 PC / 모바일만을 지원하며, 크롬 사용을 권장합니다.");
+    };
+</script>
+
     <div id="home">
         <header id="home-header">
             <div class="frame"></div>
@@ -56,13 +64,11 @@
         
         <div id="home-contents" class="wrapper">
 
-            <div class="contents-header">
-                <div class="title">
-                    <div></div>
-                    <a href="#"></a><span>이 달의 튜터리얼!</span></a>
-                </div>
-                <span class="more">더보기..</span> <!-- 이 달의 튜터리얼 페이지로 이동-->
+            <div class="title">
+                <div></div>
+                <a href="#"></a><span>이 달의 튜터리얼!</span></a>
             </div>
+            
         
             <div class="contents">
                 
@@ -106,11 +112,8 @@
         
         </div>
 
-        <footer>
-
-        </footer>
-
     </div> <!--end home-->
+
 
 {%endblock content%}
 </body>
