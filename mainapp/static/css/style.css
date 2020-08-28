@@ -397,7 +397,9 @@ a {
 }
 .title .contents-bg {
     width: 237px;
-    left: 50%;
+    position:absolute;
+    left:50%;
+    margin-left:-110px;
 }
 
 .post-contents .title-box {
@@ -524,15 +526,14 @@ a {
     width : 100px;
     height: 98px;
     margin-top : 5px;
+    margin-right: 40.18px;
 }
 
-.footer-detail{
+.footer-detail1{
     justify-content: space-between;
-    display: flex;
-    text-align: justify;
-    width: 1300px;
-    height: 98px;
-    margin-left: 20px;
+    height: 55px;
+    margin-top:17px;
+    line-height: 40px;
 }
 
 /*
