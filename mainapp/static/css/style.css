@@ -28,16 +28,19 @@ a {
 /*nav*/
 .nav-list {
     display: flex;
-    margin: 42px auto;
     list-style: none;
 }
 .nav-list li{
-    margin-left: 94px;
     font-size : 1.5rem;
     font-weight: 900;
     letter-spacing: 0px;
+    white-space: nowrap;
 }
 
+.navbar-nav{
+    display: flex;
+    list-style: none;
+}
 
 .nav-list a {
     text-decoration: none;
@@ -78,6 +81,11 @@ a {
 
 
 .navigation { /* nav-list + logo + search */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
     display: flex;
     justify-content: space-between;
 }
@@ -132,12 +140,6 @@ a {
     width: 455px;
     height: 28px;
     position: absolute;
-}
-
-.more {
-    font-size: 1.125rem;
-    font-weight: bold;
-    padding-top: 45px;
 }
 
 
@@ -201,7 +203,7 @@ a {
 /*SELECT BAR TEST*/
 
 #sort{
-    margin-top: 10px;
+    margin-top: 35px;
     margin-right: 20px;
 }
 
@@ -223,7 +225,8 @@ a {
   }
 
 .select_wrap .default_option li{
-    background:#fff;
+    margin-top:16px;
+    padding-left : 15px;
     width: 180px;
     height: 20px;
     transform: translate(-10%,-50%);
@@ -242,12 +245,13 @@ a {
   }
   .select_wrap .select_ul{
     position: absolute;
-    top: 31px;
+    top: 45px;
     left: 0;
     width: 200px;
     background: #fff;
     border: 1px solid #3B48F2;
     display: none;
+    padding-top: 10px;
   }
 .select_wrap .select_ul li{
     cursor: pointer;
@@ -282,9 +286,6 @@ a {
     margin: 60px auto 80px ;
     border: 1px solid #3B48F2;
 }
-
-
-/* 0807 1차 merge*/
 
 /*****************************post*/
 
@@ -341,10 +342,46 @@ a {
 
 .post-img p {
     font-size: 1.125rem;
+}
 
-    font-weight: 100;
+/* nav바 적용하면서 추가한 css들*/
+.container-xl{
+    margin-right : 40px !important;
+    margin-left : 40px !important;
+    max-width: 100% !important;
+}
+
+.form-control{
+    height : 44px !important;
+    width : 260px !important;
+    border : 2px solid #3B48F2 !important;
+    border-radius: 15px !important;
+    font-size : 1rem !important;
+}
+
+.navbar-nav{
+    margin-left : 20px !important;
+    width : 100%;
+    margin-bottom: 10px !important;
+    display: flex;
+}
+
+.form-control{
+    margin-left : 30px !important;
+}
+
+
+.liw{
+    flex: 1;
     margin-top: 10px;
 }
+
+#imgpadding{
+    margin-right : 120px;
+}
+/* nav바 적용하면서 추가한 css들 end*/
+
+
 
 .post-page hr {
     margin: 40px auto 60px ;
@@ -372,14 +409,110 @@ a {
     font-size: 1.125rem;
 }
 
+/*post-detail*/
 
+.post-menu {
+    text-align: center;
+    font-size: 1.5rem;
+    margin : 80px 110px 16px 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-menu span{
+    font-weight: 900;
+    width: 200px;
+    height: 66px;
+    box-shadow: 0px 10px #B2B2B2;
+    color:#B2B2B2;
+}
+
+.post-menu .who{
+    box-shadow: 0px 10px #3B48F2;
+    color:#3B48F2;
+}
+.post-menu .how{
+    box-shadow: 0px 10px #3B48F2;
+    color:#3B48F2;
+}
+.post-menu .etc{
+    box-shadow: 0px 10px #3B48F2;
+    color:#3B48F2;
+}
+.post-menu .ques{
+    box-shadow: 0px 10px #3B48F2;
+    color:#3B48F2;
+}
+
+.postbox-wrapper{
+    padding-bottom: 80px;
+}
+
+.post-box{
+    border: 3px solid #3B48F2;
+    margin: 26px 40px;
+}
+
+.post-box1{
+    text-align: left;
+    margin : 80px 138px;
+}
+
+.post-box1 #one{
+    font-weight: bold;
+    font-size : 24px;
+}
+
+.post-box #two{
+    top: 63px;
+    font-size:18px;
+    margin-top:27px;
+}
+
+.post-box #three{
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #B2B2B2;
+    margin-top:27px;
+}
+
+.post-box #four{
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-top:27px;
+}
+
+.post-box #ip{
+    text-align: left;
+    font-size:16px;
+    letter-spacing: 0px;
+    color: #3B48F2;
+    margin-top:27px;
+}
+
+.go-top{
+    width: 300px;
+    height: 100px;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 3px solid #B2B2B2;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding:30px;
+    color: #B2B2B2;
+    font-size:24px;
+    font-weight: bold;
+}
 
 /*footer*/
 
 #footer{
     background-color: #3B48F2;
     height: 230px; 
-
+    margin-top: 80px;
 }
 
 .footer-wrapper{
@@ -401,3 +534,5 @@ a {
     height: 98px;
     margin-left: 20px;
 }
+
+/* pull */
