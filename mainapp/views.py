@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import sys
 from oauth2client import client
 from googleapiclient import sample_tools
+from django.db.models import *
 # pip install google-api-python-client
 # pip install oauth2client
 
@@ -25,11 +26,8 @@ def house(request):
 def post(request):
     return render(request, 'post.html')
 
-<<<<<<< HEAD
-def calendar(request):
-    
-    return render(request, 'calendar.html')
-=======
 def intro(request):
     return render(request, 'intro.html')
->>>>>>> 3d5aef819a2d77e30f84f3cf3150af0f304e8daa
+
+def calendar(request):
+    return render(request, 'calendar.html')
