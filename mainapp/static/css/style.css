@@ -396,7 +396,9 @@ a {
 }
 .title .contents-bg {
     width: 237px;
-    left: 50%;
+    position:absolute;
+    left:50%;
+    margin-left:-110px;
 }
 
 .post-contents .title-box {
@@ -523,15 +525,124 @@ a {
     width : 100px;
     height: 98px;
     margin-top : 5px;
+    margin-right: 40.18px;
 }
 
-.footer-detail{
+.footer-detail1{
     justify-content: space-between;
-    display: flex;
-    text-align: justify;
-    width: 1300px;
-    height: 98px;
-    margin-left: 20px;
+    height: 55px;
+    margin-top:17px;
+    line-height: 40px;
 }
+
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+.clearfix::after,
+.calendar ol::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* ================
+Calendar Styling */
+.calendar {
+    border-radius: 10px;
+    width: 100%;
+}
+.cal-bg {
+    background-color: #5ffce7;
+    margin-top: 20px;
+    width: 160px;
+    height: 28px;
+    position: absolute;
+}
+
+.month {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    z-index: 1;
+    color: #3B48F2;
+}
+
+
+@media (min-width: 992px) {
+  .month {
+    font-size: 3.5rem;
+  }
+}
+
+.calendar ol li {
+    float: left;
+    width: 14.28571%;
+}
+
+.calendar .day-names {
+    border-bottom: 1px solid #eee;
+}
+
+.calendar .day-names li {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.calendar .days li {
+    border-bottom: 1px solid #eee;
+    min-height: 8rem;
+}
+
+.calendar .days li .date {
+    margin: 0.5rem 0;
+}
+
+.calendar .days li .event {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.4rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 4rem;
+    margin-bottom: 1px;
+}
+
+.calendar .days li .event.span-2 {
+    width: 200%;
+}
+
+.calendar .days li .event.span-4 {
+    width: 400%;
+}
+
+
+.calendar .days li .event.begin {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.calendar .days li .event.end {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.calendar .days li .event.clear {
+  background: none;
+}
+
+.calendar .days li:nth-child(n+29) {
+  border-bottom: none;
+}
+
+.calendar .days li.outside .date {
+  color: #ddd;
+}
+
+
 
 /* pull */
