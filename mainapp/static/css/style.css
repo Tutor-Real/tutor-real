@@ -26,6 +26,11 @@ a {
 }
 
 /*nav*/
+.nav-wrapper {
+    /*부트스트랩 적용으로 여백이 바뀐 nav*/
+    max-width: 1650px;
+    margin: 0 auto;
+}
 .nav-list {
     display: flex;
     list-style: none;
@@ -71,12 +76,6 @@ a {
     padding-left: 20px;
     font-size: 1rem;
     
-}
-
-.search-box .icon {
-    position: absolute;
-    z-index: 1;
-
 }
 
 
