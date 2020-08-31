@@ -26,7 +26,7 @@ urlpatterns = [
     path('post/', mainapp.views.post, name='post'), #세부 페이지
     path('intro',mainapp.views.intro, name= 'intro'), #소개 페이지
     path('calendar/', mainapp.views.calendar, name='calendar'), #캘린더 페이지
-    path('fi_post_1/', mainapp.views.post, name='fi_post_1'), #금융 post 1
-    path('ho_post_1/', mainapp.views.post, name='ho_post_1'), #주거 post 1
-    path('wel_post_1/', mainapp.views.post, name='wel_post_1'), #복지 post 1
+    path('fi_post_1/', mainapp.views.fi_post_1, name='fi_post_1'), #금융 post 1
+    path('ho_post_1/', mainapp.views.ho_post_1, name='ho_post_1'), #주거 post 1
+    path('wel_post_1/', mainapp.views.wel_post_1, name='wel_post_1'), #복지 post 1
 ]

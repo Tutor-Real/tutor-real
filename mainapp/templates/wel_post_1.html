@@ -1,16 +1,162 @@
+{% extends 'navi.html'%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block head %}
+      
+    {% endblock head %}   
+    
 </head>
 <body>
+{% block content %}
     
-    
-    <p>wel_post_1</p>
+    <div class="post-page">
+        <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
+            
+            <div class="post-header">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="post-bg"></div>
+                        <a href="#"></a><span>구직활동지원금</span></a>
+                    </div>
+                    <h2>#취준할_돈은_땅에서_솟나요</h2>
+                </div>
+                
+                <div class="function-box">
 
+                    <!--date, 조회순, url복사-->
+                    <span id="sh-link">URL 복사</span>
+                    <div class="post-value">
+                        <span class="date">📅 2020.00.00  </span>
+                        <span class="views">  👀 0000</span>
+                    </div>
 
+                </div>
+            
+            </div> 
+            
+            <div class="post-img"> <!--img로 넣을지 box로 넣을지-->
+                <img src="{% static 'img/post_welfare_1.jpg'%}">
+            </div> <!--end img-->
 
+            <hr>
+
+        </header>
+
+        <div class="post-contents">
+
+            <img class="post-logo" src='{% static "img\tutor-real-logo_3_2.png" %}' alt="TUTOREAL">
+
+            <div class="title-box">
+                <div class="title">
+                    <div class="contents-bg"></div>
+                    <span>구직활동지원금</span>
+                </div>
+                <h2>'###'</h2>
+            </div>
+            <p>explain</p>
+        </div>
+
+        <div class = "postbox-wrapper">
+            <div>
+                <div class="post-menu">
+                    <span class="who">신청 자격</span>
+                    <span>신청 방법</span>
+                    <span>기타</span>
+                    <span>Q&A</span>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <span>신청 자격</span>
+                    <span class="how">신청 방법</span>
+                    <span>기타</span>
+                    <span>Q&A</span>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <span >신청 자격</span>
+                    <span>신청 방법</span>
+                    <span class="etc">기타</span>
+                    <span>Q&A</span>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <span >신청 자격</span>
+                    <span>신청 방법</span>
+                    <span>기타</span>
+                    <span class="ques">Q&A</span>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+        
+    <div class = "go-top">
+        <img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow"> 맨 위로
+    </div>
+
+    <!-- URL 복사 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#sh-link", function(e) { 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'); 
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html); var input_clip = document.getElementById("clip_target"); 
+        //현재 url 가져오기
+        var _url = $(location).attr('href'); 
+        $("#clip_target").val(_url);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { var editable = input_clip.contentEditable;
+        var readOnly = input_clip.readOnly; 
+        input_clip.contentEditable = true; 
+        input_clip.readOnly = false; 
+        var range = document.createRange(); 
+        range.selectNodeContents(input_clip); 
+        var selection = window.getSelection(); 
+        selection.removeAllRanges(); 
+        selection.addRange(range); 
+        input_clip.setSelectionRange(0, 999999); 
+        input_clip.contentEditable = editable; 
+        input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+            alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요."); 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+        } else { 
+        alert('이 브라우저는 지원하지 않습니다.'); 
+        } } catch (err) {
+            alert('이 브라우저는 지원하지 않습니다.');
+            } }); //클립보드 복사
+    </script>
+
+{%endblock content%}    
 </body>
 </html>
