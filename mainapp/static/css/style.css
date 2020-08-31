@@ -508,6 +508,13 @@ a {
     font-weight: bold;
 }
 
+/* Topbutton */
+
+  /* 두 태그에 각각 y 위치 입력 */
+  #TopButton {
+    bottom: 108px;        
+  }
+
 /*footer*/
 
 #footer{
