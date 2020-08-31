@@ -321,28 +321,6 @@ a {
 }
 
 
-.post-img {
-    width: 1364px;
-    height: 380px;
-    background-color: #0F1236;
-    color: white;
-    text-align: center;
-    line-height: 60px;
-}
-
-.img-text {
-    padding-top: 80px;
-}
-
-.post-img h1 {
-    font-size: 3.75rem;
-    font-weight: 900;     
-}
-
-.post-img p {
-    font-size: 1.125rem;
-}
-
 /* nav바 적용하면서 추가한 css들*/
 .container-xl{
     margin-right : 40px !important;
@@ -420,27 +398,30 @@ a {
     justify-content: space-between;
 }
 
-.post-menu span{
+.post-menu a{
     font-weight: 900;
     width: 200px;
     height: 66px;
     box-shadow: 0px 10px #B2B2B2;
     color:#B2B2B2;
+    text-decoration-line: none;
 }
 
-.post-menu .who{
+
+
+.post-menu #who{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .how{
+.post-menu #how{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .etc{
+.post-menu #etc{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .ques{
+.post-menu #ques{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
@@ -501,11 +482,14 @@ a {
     border: 3px solid #B2B2B2;
     border-radius: 10px;
     margin: 0 auto;
-    text-align: center;
-    padding:30px;
+    padding : 32px 89px;
+}
+
+.go-top a{
     color: #B2B2B2;
-    font-size:24px;
+    font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /*footer*/
