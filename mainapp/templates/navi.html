@@ -81,6 +81,8 @@
         let nav_finance = document.getElementById("nav_finance");
         let nav_welfare = document.getElementById("nav_welfare");
         let nav_house = document.getElementById("nav_house");
+        let nav_introduce = document.getElementById("nav_introduce");
+        let nav_calendar = document.getElementById("nav_calendar");
 
         console.log(nav_finance.innerHTML);
         console.log(nav_welfare.innerHTML);
@@ -113,6 +115,18 @@
                 nav_finance.style.color="#B2B2B2" //금융 blur
                 nav_welfare.style.color="#B2B2B2" //복지 blur
                 break;
+            case '/intro/':
+                nav_calendar.style.color="#B2B2B2" //달력 blur
+                nav_finance.style.color="#B2B2B2" //금융 blur
+                nav_welfare.style.color="#B2B2B2" //복지 blur
+                nav_house.style.color="#B2B2B2" //주거 blur
+                break;
+            case '/calendar/':
+                nav_introduce.style.color="#B2B2B2" //소개 blur
+                nav_finance.style.color="#B2B2B2" //금융 blur
+                nav_welfare.style.color="#B2B2B2" //복지 blur
+                nav_house.style.color="#B2B2B2" //주거 blur
+                break;
         }
 
         function out(obj){
@@ -122,6 +136,10 @@
                 obj.id=="nav_welfare" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
             }else if(link=='/house/'){//주거일때
                 obj.id=="nav_house" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
+            }else if(link=='/intro/'){//소개일때
+                obj.id=="nav_introduce" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
+            }else if(link=='/calendar/'){//달력일때
+                obj.id=="nav_calendar" ? obj.style.color="#3B48F2" : obj.style.color="#B2B2B2";
             }else{
                 obj.style.color="#3B48F2";
             }
