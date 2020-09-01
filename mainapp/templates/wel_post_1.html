@@ -114,8 +114,8 @@
         </div> 
     </div>
         
-    <div class = "go-top">
-        <a href="#home-navi"><img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow">  맨 위로</a>
+    <div id="TopButton" class = "go-top">
+        <img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow"> 맨 위로 
     </div>
 
     <!-- URL 복사 js -->
@@ -155,6 +155,15 @@
         } } catch (err) {
             alert('이 브라우저는 지원하지 않습니다.');
             } }); //클립보드 복사
+    </script>
+
+    <!--맨 위로 가기 버튼 js-->
+    <script>
+    $(function() {     
+        $("#TopButton").click(function() {
+            $('html,body').animate({scrollTop:0},600);
+        });
+    }); 
     </script>
 
 {%endblock content%}    
