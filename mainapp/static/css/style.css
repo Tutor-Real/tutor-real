@@ -310,9 +310,9 @@ a {
     text-align: right;
 }
 
-.title .post-bg {
-    width: 237px;
-}
+.title .fi-1-bg {
+    width: 372px;
+} /* post의 title 형광펜*/
 
 .title-box h2{
     font-size: 1.5rem;
@@ -367,17 +367,13 @@ a {
 
 .post-contents {
     text-align: center;
+    margin-bottom: 180px;
 }
 
 .post-logo {
     margin-bottom: 68px;
 }
-.title .contents-bg {
-    width: 237px;
-    position:absolute;
-    left:50%;
-    margin-left:-110px;
-}
+
 
 .post-contents .title-box {
     margin-bottom: 20px;
@@ -440,7 +436,7 @@ a {
     margin : 80px 138px;
 }
 
-.post-box1 #one{
+/* .post-box1 #one{
     font-weight: bold;
     font-size : 24px;
 }
@@ -449,7 +445,7 @@ a {
     top: 63px;
     font-size:18px;
     margin-top:27px;
-}
+} 
 
 .post-box #three{
     text-align: left;
@@ -457,7 +453,7 @@ a {
     letter-spacing: 0px;
     color: #B2B2B2;
     margin-top:27px;
-}
+} 
 
 .post-box #four{
     text-align: left;
@@ -465,7 +461,7 @@ a {
     letter-spacing: 0px;
     color: #000000;
     margin-top:27px;
-}
+} 
 
 .post-box #ip{
     text-align: left;
@@ -473,7 +469,80 @@ a {
     letter-spacing: 0px;
     color: #3B48F2;
     margin-top:27px;
+}  */
+
+ /*
+ ==============================
+ post 페이지 하단 4개박스 text style
+ ==============================
+ */
+.post-box1 p{
+    font-size:18px;
 }
+.post-box1 h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+.post-box1 #red {
+    color: #D32F2F;
+}
+.post-box1 #blue {
+    color: #3B48F2;
+}
+.post-box1 #gray {
+    color: #B2B2B2;
+}
+.post-box1 #min {
+    font-size: 16px;
+}
+.post-box1 #qna {
+    color: #3B48F2;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+
+#highlight {
+    background: linear-gradient(to top, #5FFCE7 35%, transparent 35%);
+}
+
+/* hash tag, reference */
+
+
+.ref {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 46px;
+    font-size: 16px;
+    color: #B2B2B2;
+    font-weight: 300;
+}
+.hash span{
+    margin-right: 10px;
+}
+
+.reference {
+    text-align: right;
+    line-height: 32px;
+}
+.reference p{
+    margin-bottom: auto;
+}
+
+.reference h2{
+    font-size: 18px;
+    color: black;
+}
+.reference a{
+    color: #3B48F2;
+    text-decoration-line: none;
+}
+
+
+
+
+
 
 .go-top{
     width: 300px;
@@ -483,13 +552,9 @@ a {
     border-radius: 10px;
     margin: 0 auto;
     padding : 32px 89px;
-}
-
-.go-top a{
     color: #B2B2B2;
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
 }
 
 /* Topbutton */
