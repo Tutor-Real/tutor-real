@@ -136,11 +136,9 @@ a {
 .title div{
     background-color: #5ffce7;
     margin-top: 32px;
-    width: 455px;
     height: 28px;
     position: absolute;
 }
-
 
 .contents {
     display: flex;
@@ -310,9 +308,29 @@ a {
     text-align: right;
 }
 
+
+/*======================================= 
+post의 title 형광펜 
+=========================================*/
+
 .title .fi-1-bg {
     width: 372px;
-} /* post의 title 형광펜*/
+} 
+
+.title .ho-1-bg {
+    width: 458px;
+}
+
+.title .wel-1-bg {
+    width: 403px;
+}
+
+
+
+
+/*========================================*/
+
+
 
 .title-box h2{
     font-size: 1.5rem;
