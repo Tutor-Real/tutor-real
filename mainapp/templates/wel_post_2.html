@@ -1,0 +1,211 @@
+{% extends 'navi.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      
+    {% endblock head %}   
+    
+</head>
+<body>
+{% block content %}
+    
+    <div class="post-page">
+        <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
+            
+            <div class="post-header">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="wel-1-bg"></div>
+                        <a href="#"></a><span>구직활동지원금</span></a>
+                    </div>
+                    <h2>#취준할_돈은_땅에서_솟나요</h2>
+                </div>
+                
+                <div class="function-box">
+
+                    <!--date, 조회순, url복사-->
+                    <span id="sh-link">URL 복사</span>
+                    <div class="post-value">
+                        <span class="date">📅 2020.00.00  </span>
+                        <span class="views">  👀 0000</span>
+                    </div>
+
+                </div>
+            
+            </div> 
+            
+            <div class="post-img"> <!--post title img-->
+                <img src="{% static 'img/post_welfare_1.jpg'%}">
+            </div> 
+
+            <hr>
+
+        </header>
+
+        <div class="post-contents">
+
+            <img class="post-logo" src='{% static "img\tutor-real-logo_3_2.png" %}' alt="TUTOREAL">
+
+            <div class="title-box">
+                <div class="title">
+                    <div class="contents-bg "></div>
+                    <span>구직활동지원금</span>
+                </div>
+                <h2>취준하는 청년들을 위한 취업준비 비용 지원!</h2>
+            </div>
+            <p>취업 준비하는 튜티들! 취업 준비하면서도 들어갈 돈은 많은데 다른 일을 하기에는 시간이 부족하지 않아?😒</p>
+            <p>그런 튜티들에게 적극 추천! 고용노동부에서 주관하고 온라인 청년센터에서 운영하는 복지 혜택 제대로 받아가자!</p>
+            <br>
+            <p>자기주도적으로 취업을 준비하는 <span id="highlight">청년(만 18세 ~ 34세)</span>에게 월50만원씩 최대 6개월간 취업준비 비용을 지원하는 <span id="highlight">구직활동지원금</span> 같이 알아보자! 😆</p>
+            <br>
+            <p>1. 스터디프로그램, 일대일 맞춤형 상담 프로그램, 심리상담 등을 제공하고 있어서 내게 맞는 구직활동 가능해!</p>
+            <p>2. 취업 준비 기간의 지원뿐만 아니라 취업 이후 3개월 근속시 <span id="highlight">취업성공금 현금 50만원도</span> 지원해준다고!</p>
+        </div>
+
+        <div class = "postbox-wrapper">
+            <div>
+                <div class="post-menu">
+                    <a id="who" href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+                        <h2><span id="highlight">기준중위소득의 120% 이하</span>면서 
+                            <span id="highlight"> 만 18세 ~ 34세이고 </span>  👨‍🎓졸업👩‍🎓 혹은 중퇴한지 2년이 넘지 않은 미 취업자!</h2>
+                        <p id="gray">(주 근로시간이 20시간 이하인 근로자도 포함된대!🧐)</p>
+                        <p>· 네 가지 조건이 모두 충족된다면 지원 대상!!😉</p>
+                        <p>· 내가 신청 자격이 되는지 헷갈린다면 온라인 청년센터 홈페이지에서 신청자격 확인도 가능하니까 한 번 체크해봐 ✔</p>
+                        <br>
+                        <p>⬇⬇⬇  온라인 청년센터홈페이지는 글 아래에 달아 놓을게! ⬇⬇⬇ </p>
+                        <br>
+                        <p id="min">❗❗ 세부사항 홈페이지 참고</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a id="how" href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+                        <p>· 온라인 청년센터홈페이지에서 매 달 25일까지 신청을 받고 있어! 시기를 잘 맞춰서 신청하는게 좋겠지? 늦지 않게 달려가자!🏃‍♀️🏃‍♀️</p>
+                        <p>· 로그인 한 후에 홈페이지 안내에 맞춰서 정보들을 입력하고 구직활동 계획서를 작성하면 어렵지 않게 신청 가능하다구!</p>
+                        <br>
+                        <h2>신청할 때는 우리 튜티들이 조건에 맞는 지 확인할 수 있는 서류들이 필요해!💌</h2>
+                        <p>· 졸업 정보를 알기 위해서 졸업증명서 또는 제적 증명서가 필요하고,</p>
+                        <p>· 취업·창업 정보를 알기 위해서 근로계약서 또는 주 20시간 이하 근로를 입증할 수 있는 서류가 필요해!</p>
+                        <p>· 가구원 소득 정보는 고용노동부가 건강보험공단으로 부터 정보를 직접 확인하니까 별도로 서류를 제출하지 않아도 돼! 👍</p>
+                        <br>
+                        <p id="min">❗❗ 세부사항 홈페이지 참고</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a id="etc" href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+                        <p>· 고용센터와 자치단체의 다양한 취업지원 프로그램뿐만아니라 지원 대상자들을 위한 청년특화 취업특강, 멘토링, 직무 교육들을 운영하고 있어! 단순하게 금전적인 지원만 하는 게 아니라는 말이지!🙅‍♀️🙅‍♂️</p>
+                        <br>
+                        <p>· 지원금은 즉시 결제 가능한 체크 카드에 매달 1일 포인트로 발급 돼!!💳 매월 <span id="highlight">구직활동 보고서</span>를 작성해서 제출해야 해!!🕵️‍♀️🕵️‍♂️ 꾸준히 적극적으로 취업 준비를 하고 있다는 점을 보여줘야겠지? </p>
+                        <br>
+                        <p>· 지원금은 포인트로 발급되지만 취업 후 3개월 근속시 지급되는 취업 성공금 50만원은 현금으로 지급된다는 점!💸💸 </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a id="ques" href="#ques">필수 과제</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1">
+                        <p>· 필수적으로 예비 교육을 이수해야 해! 온라인, 오프라인 강의부터 소규모 프로그램까지 제공한다고해! 뿐만 아니라 지원금의 목적과 카드 사용방법, 구직활동 보고서 작성요령까지 알려주니까 꼼꼼히 들어보자구! 예비 교육 후에 카드를 발급해 주고 불출석 시 탈락 처리 되니 잊으면 안돼! 👩‍🏫</p>
+                        <br>
+                        <p>· 매월 20일 자정까지 구직활동 보고서를 작성해서 제출 해야 해!📜 고용센터에서 내용을 확인 한 후 지원금 지급 결정 여부를 결정하니까 정성껏 작성해야겠지?🖋</p>
+                        <br>
+                        <p id="min">❗❗ 세부사항 홈페이지 참고</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ref">
+                <div class="hash">
+                    <span>#금전지원</span> <span>#취준생</span> <span>#복지</span> <span>#취준</span> <span>#구직</span> <span>#청년</span>
+                </div>
+                <div class="reference">
+                    <h2>참고자료</h2>
+                    <p>온라인 청년 센터 구직활동지원금 소개 페이지</p>
+                    <a href="#" onclick="window.open('https://www.youthcenter.go.kr/seekActvSptfndAppl/aboutThis.do')">https://www.youthcenter.go.kr/seekActvSptfndAppl/aboutThis.do</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+        
+    <div id="TopButton" class = "go-top">
+        <img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow"> 맨 위로 
+    </div>
+
+    <!-- URL 복사 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#sh-link", function(e) { 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'); 
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html); var input_clip = document.getElementById("clip_target"); 
+        //현재 url 가져오기
+        var _url = $(location).attr('href'); 
+        $("#clip_target").val(_url);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { var editable = input_clip.contentEditable;
+        var readOnly = input_clip.readOnly; 
+        input_clip.contentEditable = true; 
+        input_clip.readOnly = false; 
+        var range = document.createRange(); 
+        range.selectNodeContents(input_clip); 
+        var selection = window.getSelection(); 
+        selection.removeAllRanges(); 
+        selection.addRange(range); 
+        input_clip.setSelectionRange(0, 999999); 
+        input_clip.contentEditable = editable; 
+        input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+            alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요."); 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+        } else { 
+        alert('이 브라우저는 지원하지 않습니다.'); 
+        } } catch (err) {
+            alert('이 브라우저는 지원하지 않습니다.');
+            } }); //클립보드 복사
+    </script>
+
+    <!--맨 위로 가기 버튼 js-->
+    <script>
+    $(function() {     
+        $("#TopButton").click(function() {
+            $('html,body').animate({scrollTop:0},600);
+        });
+    }); 
+    </script>
+
+{%endblock content%}    
+</body>
+</html>
