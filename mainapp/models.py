@@ -1,6 +1,11 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-
-# Create your models here.
 
 
 class AuthGroup(models.Model):
@@ -12,13 +17,13 @@ class AuthGroup(models.Model):
 
 
 class AuthGroupPermissions(models.Model):
-    group = models.ForeignKey(AuthGroup, models.DO_NOTHING) 
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
     permission = models.ForeignKey('AuthPermission', models.DO_NOTHING)
 
     class Meta:
         managed = False
         db_table = 'auth_group_permissions'
-        unique_together = (('group', 'permission'),)        
+        unique_together = (('group', 'permission'),)
 
 
 class AuthPermission(models.Model):
@@ -29,7 +34,7 @@ class AuthPermission(models.Model):
     class Meta:
         managed = False
         db_table = 'auth_permission'
-        unique_together = (('content_type', 'codename'),)   
+        unique_together = (('content_type', 'codename'),)
 
 
 class AuthUser(models.Model):
@@ -50,8 +55,8 @@ class AuthUser(models.Model):
 
 
 class AuthUserGroups(models.Model):
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING)   
-    group = models.ForeignKey(AuthGroup, models.DO_NOTHING) 
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -60,7 +65,7 @@ class AuthUserGroups(models.Model):
 
 
 class AuthUserUserPermissions(models.Model):
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING)   
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
     permission = models.ForeignKey(AuthPermission, models.DO_NOTHING)
 
     class Meta:
@@ -69,14 +74,31 @@ class AuthUserUserPermissions(models.Model):
         unique_together = (('user', 'permission'),)
 
 
+class Contents(models.Model):
+    content_pk = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=45)
+    date = models.DateTimeField()
+    host = models.CharField(max_length=45, blank=True, null=True)
+    view = models.IntegerField()
+    tag = models.CharField(max_length=45, blank=True, null=True)
+    startdate = models.DateField(blank=True, null=True)
+    enddate = models.DateField(blank=True, null=True)
+    img = models.TextField(blank=True, null=True)
+    category = models.CharField(max_length=10, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'contents'
+
+
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
-    object_id = models.TextField(blank=True, null=True)     
+    object_id = models.TextField(blank=True, null=True)
     object_repr = models.CharField(max_length=200)
     action_flag = models.PositiveSmallIntegerField()
     change_message = models.TextField()
     content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
-    user = models.ForeignKey(AuthUser, models.DO_NOTHING)   
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -111,54 +133,3 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
-
-
-class Finance(models.Model):
-    fn_pk = models.AutoField(primary_key=True)
-    fn_title = models.CharField(max_length=45)
-    fn_date = models.DateTimeField()
-    fn_host = models.CharField(max_length=45, blank=True, null=True)
-    fn_view = models.IntegerField()
-    fn_tag = models.CharField(max_length=45, blank=True, null=True)
-    fn_startdate = models.DateField(blank=True, null=True)  
-    fn_enddate = models.DateField(blank=True, null=True)    
-    fn_img = models.TextField(blank=True, null=True)        
-    fn_content = models.TextField(blank=True, null=True)    
-
-    class Meta:
-        managed = False
-        db_table = 'finance'
-
-
-class Residence(models.Model):
-    rd_pk = models.AutoField(primary_key=True)
-    rd_title = models.CharField(max_length=45)
-    rd_date = models.DateTimeField()
-    rd_host = models.CharField(max_length=45, blank=True, null=True)
-    rd_view = models.IntegerField()
-    rd_tag = models.CharField(max_length=45, blank=True, null=True)
-    rd_startdate = models.DateField(blank=True, null=True)  
-    rd_enddate = models.DateField(blank=True, null=True)    
-    rd_img = models.TextField(blank=True, null=True)        
-    rd_content = models.TextField(blank=True, null=True)    
-
-    class Meta:
-        managed = False
-        db_table = 'residence'
-
-
-class Welfare(models.Model):
-    wf_pk = models.AutoField(primary_key=True)
-    wf_title = models.CharField(max_length=45)
-    wf_date = models.DateTimeField()
-    wf_host = models.CharField(max_length=45, blank=True, null=True)
-    wf_view = models.IntegerField()
-    wf_tag = models.CharField(max_length=45, blank=True, null=True)
-    wf_startdate = models.DateField(blank=True, null=True)
-    wf_enddate = models.DateField(blank=True, null=True)
-    wf_img = models.TextField(blank=True, null=True)
-    wf_content = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'welfare'

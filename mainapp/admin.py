@@ -3,7 +3,5 @@ from .models import *
 
 # Register your models here.
 
-admin.site.register(Finance)
-admin.site.register(Welfare)
-admin.site.register(Residence)
+admin.site.register(Contents)
 admin.site.register(AuthUser)

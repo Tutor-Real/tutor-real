@@ -88,8 +88,8 @@ DATABASES = {
         'HOST': config['DATABASE']['HOST'],                     
         'PORT': config['DATABASE']['PORT'], 
         'options': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }, 
+            'init_command': "SET sql_mode='STRICT_ALL_TABLES'"
+        } 
     }
     
 }
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
 TIME_ZONE = 'Asia/Seoul'
 
