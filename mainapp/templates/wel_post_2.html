@@ -1,0 +1,214 @@
+{% extends 'navi.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      
+    {% endblock head %}   
+    
+</head>
+<body>
+{% block content %}
+    
+    <div class="post-page">
+        <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
+            
+            <div class="post-header">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="wel-2-bg"></div> <!---메인제목 형광펜--->
+                        <span>국가장학금</span>
+                    </div>
+                    <h2>#나라가_주는_장학금</h2>
+                </div>
+                
+                <div class="function-box">
+
+                    <!--date, 조회순, url복사-->
+                    <span id="sh-link">URL 복사</span>
+                    <div class="post-value">
+                        <span class="date">📅 2020.09.03  </span>
+                        <span class="views">  👀 0000</span>
+                    </div>
+
+                </div>
+            
+            </div> 
+            
+            <div class="post-img"> <!--post title img-->
+                <img src="{% static 'img/post_welfare_2.jpg'%}">
+            </div> 
+
+            <hr>
+
+        </header>
+
+        <div class="post-contents">
+
+            <img class="post-logo" src='{% static "img\tutor-real-logo_3_2.png" %}' alt="TUTOREAL">
+
+            <div class="title-box">
+                <div class="title">
+                    <div class="contents-bg "></div>
+                    <span>국가장학금</span>
+                </div>
+                <h2><!--부제--></h2>
+            </div>
+            <p>대학생인 튜티라면 꼭 알아야한다고!!</p>
+            <p>능력과 의지가 있는 학생들🤓에게 경제적 여건에 관계없이 균등한 기회를 제공하고자하는 나라에서 지급하는 장학금! 💰💰</p>
+            <br>
+            <p>자세한 내용은 하단 참고자료에 한국장학재단 홈페이지 들어가서 확인🔍</p>
+        </div>
+
+        <div class = "postbox-wrapper">
+            <div>
+                <div class="post-menu">
+                    <a id="who" href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">참고 사항</a>
+                    <a href="#ques">Q & A</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight/#qna-->
+                        <h2>대한민국 국적으로, 국가 장학금 2유형 참여대학에 재학 중인 대학생👨‍🎓👩‍🎓이면서 해당학기의 국가 장학금 신청 절차를 완료✔해야 해. 장학 대상자는 대학별 자체 선발기준을 수립하며 선발하고 있어!!</h2>
+                        <br>
+                        <p>- 하지만 학적 변동으로 등록금을 환불 받는 경우나 중복지원으로 학자금을 초과하여 지원받은 경우에는 국가 장학금을 반환 해야해. 또는 사회적 물의를 야기하는 등 국가 장학금 수혜자로서 적절하지 않다고 판단되는 경우에는 국가 장학금 지원이 제한될 수 있어. 📛📛</p>
+                        <br>
+                        <p>- 이 외에도 등록금 범위 초과 기타 학자금과 <span id="highlight">중복 수혜가 불가능</span>하고 학자금지원제도 심의위원회 심의 결과에 따른 제한 대상일 경우 제외된다는 점 잘 알아두는 게 좋을 거야❗❗</p>
+                        <br>
+                        <p>- 소득분위를 기준으로 <span id="highlight">8분위 이하</span>의 학생들을 대상으로 하니 9분위, 10분위 학생들은 다음 학기를 노려보는 걸로….💦</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a id="how" href="#how">신청 방법</a>
+                    <a href="#etc">참고 사항</a>
+                    <a href="#ques">Q & A</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight/#qna-->
+                        <h2><span id="highlight">한국 장학재단 홈페이지</span>에서 신청💻한 후 요구하는 서류를 제출📑 하면 돼!</h2>
+                        <p>기본적으로는 <span id="highlight">가족 관계 증명서</span>👪가 필요하지만</p>
+                        <p>가족 관계에 따라 <span id="highlight">추가적으로 필요한 서류가 다르니까</span> 튜티에게 맞는 서류가 뭔지 한국 장학 재단 홈페이지에서 확인해 보도록 해! 📄📜 📃</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a id="etc" href="#etc">참고 사항</a>
+                    <a href="#ques">Q & A</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight/#qna-->
+                        <p>- 장애인이거나 대학생 자녀가 2명 이상인 가구, *다자녀 가구의 학생, 긴급 경제사정 곤란자 또는 선 취업·후진학의 학생의 경우 우대지원 권고 사항이니 해당되는지 확인해보도록 해!✔✔</p>
+                        <br>
+                        <p>- 졸업 학기의 경우 직전학기 이수학점 12학점 이상 기준에서 제외되니까 걱정하지 않아도 돼!‍👨‍🎓</p>
+                        <p>- 소속 대학의 최저 이수학점이 12학점 미만인 경우에는 소속대학의 학사 규정을 따른다니 참고하면 좋겠지?! 📜</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">참고 사항</a>
+                    <a id="ques" href="#ques">Q & A</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight/#qna-->
+                        
+                        <p><span id="qna">Q. </span> 국가 장학금 I유형과는 어떤 차이점이 있는건가요?</p>
+                        <p><span id="qna">A. </span> 
+                            1유형은 <span id="highlight">학생직접지원형 장학금</span>으로 학생이 속한 가구의 소득수준과 연계하여 경제적으로 어려운 학생들이 보다 
+                            많은 혜택을 받을 수 있도록 설계되어졌고, 2유형은 <span id="highlight">대학연계지원형 장학금</span>으로 대학과 연계하여 등록금 부담을 덜어
+                            주기 위해서 만들어졌어! 1유형 신청시 2유형도 자동으로 같이 신청되며, <span id="highlight">상황에 따라 모두가 받을 수 있는 장학금은 아니라는 점! </span>🙅‍♀️ 
+                        </p>
+                        <br>
+                        <p><span id="qna">Q. </span> 이번 학기에 국가장학금 선발에 탈락하면 다음 학기에도 받을 수 없나요? </p>
+                        <p><span id="qna">A. </span> 
+                            답은 No!🙅‍♂️ 국가장학금은 <span id="highlight">매 학기 마다 신청</span>을 받고 있고, <span id="highlight">신청 학기 마다 소득분위를 심사</span>✍하고 있기 때문에
+                            다음 학기에 소득구간(분위)와 성적, 학적정보를 모두 충족할 경우에는 장학금을 받을 수 있어! 
+                        </p>
+                        <br>
+                        <p><span id="qna">Q. </span> 장학금을 수혜한 경우에 휴학을 하게 된다면 장학금을 반환해야 하나요?</p>
+                        <p><span id="qna">A. </span> 
+                            자퇴 등으로 학적이 소멸하거나, 학사 규정에 따라 등록금을 반환하는 경우에는 <span id="highlight">국가장학금을 반납</span>해야해!😂 
+                            <p>하지만 등록금을 납부하고 휴학하는 경우에는 <span id="highlight">반환하지 않아도 OK!</span> </p>
+                            <p>그러나 대학마다 약간의 차이는 있을 수 있으니 애매하다면 학교에 문의하는 게 좋겠지? 📞</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ref">
+                <div class="hash">
+                    <span>#대학생 </span><span>#등록금감면</span><span>#장학금</span><span>#복지</span><span>#청년</span><span>#장학금</span>
+                </div>
+                <div class="reference">
+                    <h2>참고자료</h2>
+                    <p>한국장학재단>장학금>소득연계형 국가장학금>국가장학금Ⅱ유형(대학연계지원형)</p>
+                    <a href="#" onclick="window.open('https://www.kosaf.go.kr/')">https://www.kosaf.go.kr/</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+        
+    <div id="TopButton" class = "go-top">
+        <img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow"> 맨 위로 
+    </div>
+
+    <!-- URL 복사 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#sh-link", function(e) { 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'); 
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html); var input_clip = document.getElementById("clip_target"); 
+        //현재 url 가져오기
+        var _url = $(location).attr('href'); 
+        $("#clip_target").val(_url);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { var editable = input_clip.contentEditable;
+        var readOnly = input_clip.readOnly; 
+        input_clip.contentEditable = true; 
+        input_clip.readOnly = false; 
+        var range = document.createRange(); 
+        range.selectNodeContents(input_clip); 
+        var selection = window.getSelection(); 
+        selection.removeAllRanges(); 
+        selection.addRange(range); 
+        input_clip.setSelectionRange(0, 999999); 
+        input_clip.contentEditable = editable; 
+        input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+            alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요."); 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+        } else { 
+        alert('이 브라우저는 지원하지 않습니다.'); 
+        } } catch (err) {
+            alert('이 브라우저는 지원하지 않습니다.');
+            } }); //클립보드 복사
+    </script>
+
+    <!--맨 위로 가기 버튼 js-->
+    <script>
+    $(function() {     
+        $("#TopButton").click(function() {
+            $('html,body').animate({scrollTop:0},600);
+        });
+    }); 
+    </script>
+
+{%endblock content%}    
+</body>
+</html>

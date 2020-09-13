@@ -136,11 +136,9 @@ a {
 .title div{
     background-color: #5ffce7;
     margin-top: 32px;
-    width: 455px;
     height: 28px;
     position: absolute;
 }
-
 
 .contents {
     display: flex;
@@ -305,43 +303,58 @@ a {
     justify-content: space-between;
 }
 
-.function-box {
-    margin-top: 60px;
-    text-align: right;
-}
-
-.title .post-bg {
-    width: 237px;
-}
-
 .title-box h2{
     font-size: 1.5rem;
     font-weight: 700;
     margin: 8px 10px 38px;
 }
 
-
-.post-img {
-    width: 1364px;
-    height: 380px;
-    background-color: #0F1236;
-    color: white;
-    text-align: center;
-    line-height: 60px;
+.function-box {
+    text-align: right;
+    height: 55px;
+    margin-top: 75px;
 }
 
-.img-text {
-    padding-top: 80px;
+/*post - url 복사, views, date*/
+#sh-link {
+    font-size: 13px;
+    border: 1px solid #B2B2B2;
+    border-radius: 5px;
+    padding : 3px 9px;
+}
+.post-value {
+    display: flex;
+    justify-content: space-between;
+    width: 172px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #B2B2B2;
 }
 
-.post-img h1 {
-    font-size: 3.75rem;
-    font-weight: 900;     
-}
 
-.post-img p {
-    font-size: 1.125rem;
-}
+/*======================================= 
+post의 title 형광펜 
+=========================================*/
+
+.title .fi-1-bg {width: 372px;} 
+
+.title .wel-1-bg {width: 403px;}
+.title .wel-2-bg {width: 292px;}
+.title .wel-3-bg {width: 499px;}
+
+.title .ho-1-bg {width: 458px;}
+.title .ho-2-bg {width: 237px;}
+
+
+
+
+
+
+/*========================================*/
+
+
+
 
 /* nav바 적용하면서 추가한 css들*/
 .container-xl{
@@ -389,16 +402,11 @@ a {
 
 .post-contents {
     text-align: center;
+    margin-bottom: 110px;
 }
 
 .post-logo {
     margin-bottom: 68px;
-}
-.title .contents-bg {
-    width: 237px;
-    position:absolute;
-    left:50%;
-    margin-left:-110px;
 }
 
 .post-contents .title-box {
@@ -420,27 +428,29 @@ a {
     justify-content: space-between;
 }
 
-.post-menu span{
+.post-menu a{
     font-weight: 900;
     width: 200px;
-    height: 66px;
+    height: 120px;
     box-shadow: 0px 10px #B2B2B2;
     color:#B2B2B2;
+    text-decoration-line: none;
+    padding-top: 60px;
 }
 
-.post-menu .who{
+.post-menu #who{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .how{
+.post-menu #how{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .etc{
+.post-menu #etc{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
-.post-menu .ques{
+.post-menu #ques{
     box-shadow: 0px 10px #3B48F2;
     color:#3B48F2;
 }
@@ -459,7 +469,7 @@ a {
     margin : 80px 138px;
 }
 
-.post-box1 #one{
+/* .post-box1 #one{
     font-weight: bold;
     font-size : 24px;
 }
@@ -468,7 +478,7 @@ a {
     top: 63px;
     font-size:18px;
     margin-top:27px;
-}
+} 
 
 .post-box #three{
     text-align: left;
@@ -476,7 +486,7 @@ a {
     letter-spacing: 0px;
     color: #B2B2B2;
     margin-top:27px;
-}
+} 
 
 .post-box #four{
     text-align: left;
@@ -484,7 +494,7 @@ a {
     letter-spacing: 0px;
     color: #000000;
     margin-top:27px;
-}
+} 
 
 .post-box #ip{
     text-align: left;
@@ -492,7 +502,97 @@ a {
     letter-spacing: 0px;
     color: #3B48F2;
     margin-top:27px;
+}  */
+
+ /*
+ ==============================
+ post 페이지 하단 4개박스 text style
+ ==============================
+ */
+.post-box1 .post-table {
+    display: flex;
 }
+
+.blue-box {
+    width : 122px;
+    border-radius: 15px;
+    background-color: #3B48F2;
+    color: #fff;
+    text-align: center;
+    padding: 24px 10px;
+    margin-right: 16px;
+}
+
+.list-box {
+    margin: auto 0px;
+}
+
+ .post-box1 p{
+    font-size:18px;
+}
+.post-box1 h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+.post-box1 #red {
+    color: #D32F2F;
+}
+.post-box1 #blue {
+    color: #3B48F2;
+}
+.post-box1 #gray {
+    color: #B2B2B2;
+}
+.post-box1 #min {
+    font-size: 16px;
+}
+.post-box1 #qna {
+    color: #3B48F2;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+#highlight {
+    background: linear-gradient(to top, #5FFCE7 35%, transparent 35%);
+}
+
+
+/* hash tag, reference */
+
+.ref {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 46px;
+    font-size: 16px;
+    color: #B2B2B2;
+    font-weight: 300;
+}
+.hash span{
+    margin-right: 10px;
+}
+
+.reference {
+    text-align: right;
+    line-height: 32px;
+}
+.reference p{
+    margin-bottom: auto;
+}
+
+.reference h2{
+    font-size: 18px;
+    color: black;
+}
+.reference a{
+    color: #3B48F2;
+    text-decoration-line: none;
+}
+
+
+
+
+
 
 .go-top{
     width: 300px;
@@ -501,12 +601,18 @@ a {
     border: 3px solid #B2B2B2;
     border-radius: 10px;
     margin: 0 auto;
-    text-align: center;
-    padding:30px;
+    padding : 32px 89px;
     color: #B2B2B2;
-    font-size:24px;
+    font-size: 24px;
     font-weight: bold;
 }
+
+/* Topbutton */
+
+  /* 두 태그에 각각 y 위치 입력 */
+  #TopButton {
+    bottom: 108px;        
+  }
 
 /*footer*/
 

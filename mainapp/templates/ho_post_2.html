@@ -1,0 +1,324 @@
+{% extends 'navi.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+      
+    {% endblock head %}   
+    
+</head>
+<body>
+{% block content %}
+    
+    <div class="post-page">
+        <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
+            
+            <div class="post-header">
+                <div class="title-box">
+                    <div class="title">
+                        <div class="ho-2-bg"></div> <!--페이지별 형광펜 길이-->
+                        <span><!--메인제목-->주택청약</span>
+                    </div>
+                    <h2><!--부제목-->#야_너도_로또청약_될_수_있어</h2>
+                </div>
+                
+                <div class="function-box">
+
+                    <!--date, 조회순, url복사-->
+                    <span id="sh-link">URL 복사</span>
+                    <div class="post-value">
+                        <span class="date">📅 2020.09.05  </span> <!--날짜수정-->
+                        <span class="views">  👀 0000</span>
+                    </div>
+
+                </div>
+            
+            </div> 
+            
+            <div class="post-img"> <!--post title img-->
+                <img src="{% static 'img/post_house_2.jpg'%}"> <!--페이지에 맞는 이미지 넣기-->
+            </div> 
+
+            <hr>
+
+        </header>
+
+        <div class="post-contents">
+
+            <img class="post-logo" src='{% static "img\tutor-real-logo_3_2.png" %}' alt="TUTOREAL">
+
+            <div class="title-box">
+                <div class="title">
+                    <div class="contents-bg "></div>
+                    <span><!--메인제목-->주택청약</span>
+                </div>
+                <h2><!--부제--></h2>
+            </div>
+            <p>청약관련 예금을 통하여 일정한 요건을 갖춘 자에게 동시분양되는 아파트에 청약할 수 있는 자격을 주는 제도</p>
+        </div>
+
+        <div class = "postbox-wrapper">
+            <div>
+                <div class="post-menu">
+                    <a id="who" href="#who">APT 청약</a>
+                    <a href="#how">도시형 청약 등</a>
+                    <a href="#etc">청약신청</a>
+                    <a href="#ques">당첨자 선정</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        
+                        <h2><span id="highlight">APT 청약<span id="gray">(수도권 기준)</span></span></h2>
+                        <br>
+                        <h2>[주택종류]</h2>
+                        <p>주택 종류로는 국민주택<span id="gray">(주거전용면적 85m² 이하)</span>과 민영주택<span id="gray">(국민주택을 제외한 주택)</span> 두✌🏻 가지가 있어!</p>
+                        <br>
+                        <h2>[청약통장]</h2>
+                        <p>주택청약에 가입하려면 청약통장💰이 필요해. 청약통장은 ‘주택청약종합저축’이라고 하고 농협은행, 신한은행, 우리은행, 하나은행 등의 <span id="highlight">은행</span>에서 개설할 수 있어.</p>
+                        <p>국내에 거주하는 개인이면 누구나 만들 수 있고, 매달 2만원 - 50만원을 적립 또는 저축하면 돼!</p>
+                        <br>
+                        <p>주택청약을 하려면 아래의 서류를 준비해야 해!</p>
+                        
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>청약 통장</h2>
+                                <h2>가입 서류</h2>
+                            </div>
+                            <div class="list-box">
+                                <p>· 본인이 직접 가입신청 시: 실명확인증표</p>
+                                <p>· 배우자/직계존·비속이 대리 가입신청 시: 주민등록표등본, 대리인 실명확인증표</p>
+                                <p>· 제3자가 가입신청 시: 본인 및 대리인 실명확인증표, 본인이 작성한 위임장, 본인의 인감증명서 <span id="gray">(금융계좌 개설용)</span></p>
+                            </div>
+                        </div> <!--end post-table box-->
+                        <br>
+                        <h2>[청약자격]</h2>
+                        <p>국민주택과 민영주택 모두 최초 입주자모집공고일 현재 <span id="highlight">해당 주택건설지역</span> 또는 <span id="highlight">인근지역</span>에 거주하는 자로서, 만 19세 이상이고 홈페이지의 청약 자격을 참고했을 때 어느 하나에 해당하는 세대주인 미성년자<span id="gray">(주택청약 시 성년자로 인정)</span>만 청약신청을 할 수 있어😊</p>
+                        <p>자세한 사항은 청약홈 홈페이지에서 확인해볼 수 있어🔎</p>
+                        <a href="#" onclick="window.open('https://www.applyhome.co.kr/ar/ara/selectSubscrptIntroQualfView.do')">https://www.applyhome.co.kr/ar/ara/selectSubscrptIntroQualfView.do</a>
+                        <br>
+                        <br>
+                        <h2>[특별공급]</h2>
+                        <p>특별공급은 다자녀가구, 신혼부부, 국가유공자, 노부모 부양자 등 정책적 배려가 필요한 계층이 분양<span id="gray">(임대)</span>받을 수 있도록 주택마련을 지원해주는 제도야.</p>
+                        <p>청약할 주택에 해당하는 청약통장을 보유하고 있어야 되고, 당첨 횟수를 <span id="highlight">1세대 당 평생 1회</span>로 제한되고 있어!</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">APT 청약</a>
+                    <a id="how" href="#how">도시형 청약 등</a>
+                    <a href="#etc">청약신청</a>
+                    <a href="#ques">당첨자 선정</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        <h2><span id="highlight">민간임대/오피스텔/도시형 청약<span id="gray">(공공지원, 수도권 기준)</span></span></h2>
+                        <br>
+                        <h2>[주택종류]</h2>
+                        <p>주택 종류로는 민간임대주택, 공공지원 민간임대 주택, 오피스텔, 도시형 생활주택이 있어.</p>
+                        <br>
+                        <h2>[청약통장]</h2>
+                        <p>청약통장💰이 없어도 주택청약에 가입할 수 있어. 이 제도는 APT 주택청약과는 달리 청약 시 청약통장을 사용하지 않고 입출금이 자유로운 계좌에서 청약금을 예치<span id="gray">(출금)</span>하면 돼. 그리고 APT에 적용되는 재당첨 제한 및 청약자격 등이 적용되지 않지😀</p>
+                        <br>
+                        <h2>[청약자격]</h2>
+                        <p>청약하기 위해 특별히 자격이 필요하지는 않아. 별도의 청약통장 없이 만 19세 이상이면 ✨누구나 청약을 신청할 수 있어.</p>
+                        <p>공공지원 민간임대주택과 신혼부부 특별공급의 경우는 나이와 관계 없이 청약이 가능해😉</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">APT 청약</a>
+                    <a href="#how">도시형 청약 등</a>
+                    <a id="etc" href="#etc">청약신청</a>
+                    <a href="#ques">당첨자 선정</a>
+                </div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        <h2>1. APT 청약 (수도권 기준)</h2>
+                        <br>
+                        <h2>[인터넷 청약신청]</h2>
+                        <p>인터넷으로 청약을 하려면 공인인증서를 준비하고 청약홈 홈페이지에서 신청하면 돼!</p>
+                        <p>- 청약Home 홈페이지 → 청약신청 → APT → 청약신청</p>
+                        <br>
+                        <h2>[은행지점 청약신청]</h2>
+                        <p>은행지점에서 청약을 하는 경우 아래의 구비서류를 지참하면 신청할 수 있어😄</p>
+
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>본인</h2>
+                            </div>
+                            <div class="list-box">
+                                <p>· 주택공급신청서 (은행 창구 비치)</p>
+                                <p>· 청약통장(청약예금, 부금, 저축, 주택청약종합저축)</p> 
+                                <p>· 통장 도장 또는 본인·배우자 서명</p>
+                                <p>· 본인확인증표(주민등록증 등. 재외동포는 *국내거소신고증, 외국인은 외국인등록증)</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>제3자</h2>
+                                <h2>대리신청</h2>
+                            </div>
+                            <div class="list-box">
+                                <p>· 본인 신청 시 구비서류 외 다음 서류 추가 제출</p>
+                                <p>· 청약자의 인감증명서 1통</p> 
+                                <p>(용도 : 주택공급신청용, 재외동포 또는 외국인의 경우 본국 관공서의 증명서(서명인증서)나 이에 관한 *공정증서)</p>
+                                <p>· 본인확인증표(주민등록증 등. 재외동포는 *국내거소신고증, 외국인은 외국인등록증)</p>
+                                <p>· 청약자의 인감도장이 날인된 위임장 1통(은행창구 비치)</p>
+                                <p>· 청약자의 인감도장 (재외동포 또는 외국인의 경우 인증된 서명으로 위임 시 제외)</p>
+                                <p>· 대리 신청자의 신분증 (청약자 본인 신분증 제출 생략)</p>
+                                <br>
+                                <p>※ 청약신청자의 배우자일지라도 상기의 제3자 대리신청 시 관련서류를 제출하여야 청약신청자를 대리하여 청약할 수 있음.</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <h2>2. (공공지원)민간임대/오피스텔/도시형 청약(수도권 기준)</h2>
+                        <br>
+                        <h2>[인터넷 청약신청]</h2>
+                        <p>인터넷으로 청약을 하려면 공인인증서를 준비하고 청약홈 홈페이지에서 신청하면 돼!</p>
+                        <br>
+                        <p>❗ 민간임대/도시형 생활주택/오피스텔 청약</p>
+                        <p>- 청약Home 홈페이지 → 청약신청 → 민간임대/도시형 생활주택/오피스텔 → 청약신청 </p>
+                        <br>
+                        <p>❗ 공공지원 민간임대 청약</p>
+                        <p>- 청약Home 홈페이지 → 청약신청 → 공공지원 민간임대 → 청약신청</p>
+                        <br>
+                        <h2>[견본주택 / 은행지점 청약신청]</h2>
+                        <p>은행지점에서 청약을 하는 경우 아래의 구비서류를 지참하면 신청할 수 있어😄</p>
+                        
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>본인</h2>
+                            </div>
+                            <div class="list-box">
+                                <p>· 공급신청서(견본주택 또는 은행창구 비치)</p>
+                                <p>· 본인 도장(본인의 경우 서명 가능)</p> 
+                                <p>· 실명확인증표 : 주민등록증(본인 및 배우자), 재외동포는 *국내거소신고증, 외국인은 외국인 등록증</p>
+                                <p>· 청약신청금</p>
+                                <p>· 청약신청금 환불 받을 통장 사본 1부(청약신청인 명의)</p>
+                            </div>
+                        </div>
+                        
+                        <br>
+                        
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>제3자</h2>
+                                <h2>대리신고</h2>
+                            </div>
+                            <div class="list-box">
+                                <p>본인 이외에는 모두 대리신청자(직계존·비속 포함)로 간주하며 상기 구비사항 외에 다음의 서류를 추가 구비해야 해!</p>
+                                <p>· 청약자의 인감증명서 1통 </p> 
+                                <p> ※ 다만, 외국인은 본국 관공서의 증명(서명인증서) 또는 이에 관한 공정증서</p>
+                                <p> 청약자의 인감도장(외국인이 인증된 서명으로 공급신청 위임 시 제출 생략)</p>
+                                <p>· 청약자의 인감도장이 날인된 위임장 1통 · 대리인의 신분증(재외동포는 국내거소신고증, 외국인은 외국인 등록증)</p>
+                                <p> ※ 청약자 본인의 주민등록증 제출 생략 가능</p>
+                            </div>
+                        </div>
+
+                        <br>
+                            
+                        <div class="post-table">
+                            <div class="blue-box">
+                                <h2>법인</h2>
+                            </div>
+                            <div class="list-box">
+                                    <p>본인 및 배우자 이외에는 모두 대리신청자(직계존·비속 포함)로 간주하며 상기 구비사항 외에 다음의 서류를 추가 구비해야 해!</p>
+                                    <p>· 공급신청서(은행창구 비치)</p> 
+                                    <p>· 법인인감 및 법인인감증명서 1통(사용인감 사용시 사용인감 제출)</p>
+                                    <p>· 사업자등록증 사본</p>
+                                    <p>· 청약신청금</p>
+                                    <p>· 청약신청금 환불받을 통장 사본 1부(청약신청 법인 명의)</p>
+                                    <p>법인 대표이사 본인 신청 시 주민등록증, 재외동포는 국내거소증, 외국인은 외국인등록증</p>
+                                    <p>(직원 및 대리인 신청 시 위임장, 대리인 신분증 지참)</p>
+                                    <p>※ 공공지원민간임대주택은 법인 청약 불가</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="post-menu">
+                    <a href="#who">APT 청약</a>
+                    <a href="#how">도시형 청약 등</a>
+                    <a href="#etc">청약신청</a>
+                    <a id="ques" href="#ques">당첨자 선정</a></div>
+                <div class="post-box">
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight-->
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ref">
+                <div class="hash">
+                    <span>#<!--해쉬태그--></span>
+                </div>
+                <div class="reference">
+                    <h2>참고자료</h2>
+                    <p><!--사이트명--></p>
+                    <a href="#" onclick="window.open('#')"><!--사이트 링크--></a>
+                </div>
+            </div>
+        </div> 
+    </div>
+        
+    <div id="TopButton" class = "go-top">
+        <img class="up-arrow" src='{% static "img/up_grey_arrow.png" %}' alt="up-arrow"> 맨 위로 
+    </div>
+
+    <!-- URL 복사 js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).on("click", "#sh-link", function(e) { 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'); 
+        var html = "<input id='clip_target' type='text' value='' style='position:absolute;top:-9999em;'/>";
+        $(this).append(html); var input_clip = document.getElementById("clip_target"); 
+        //현재 url 가져오기
+        var _url = $(location).attr('href'); 
+        $("#clip_target").val(_url);
+        if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) { var editable = input_clip.contentEditable;
+        var readOnly = input_clip.readOnly; 
+        input_clip.contentEditable = true; 
+        input_clip.readOnly = false; 
+        var range = document.createRange(); 
+        range.selectNodeContents(input_clip); 
+        var selection = window.getSelection(); 
+        selection.removeAllRanges(); 
+        selection.addRange(range); 
+        input_clip.setSelectionRange(0, 999999); 
+        input_clip.contentEditable = editable; 
+        input_clip.readOnly = readOnly; 
+        } else { 
+            input_clip.select(); 
+        } try { 
+            var successful = document.execCommand('copy'); 
+            input_clip.blur(); 
+            if (successful) { 
+            alert("URL이 복사 되었습니다. 원하시는 곳에 붙여넣기 해 주세요."); 
+        // 링크복사 시 화면 크기 고정 
+        $('html').find('meta[name=viewport]').attr('content', 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=yes'); 
+        } else { 
+        alert('이 브라우저는 지원하지 않습니다.'); 
+        } } catch (err) {
+            alert('이 브라우저는 지원하지 않습니다.');
+            } }); //클립보드 복사
+    </script>
+
+    <!--맨 위로 가기 버튼 js-->
+    <script>
+    $(function() {     
+        $("#TopButton").click(function() {
+            $('html,body').animate({scrollTop:0},600);
+        });
+    }); 
+    </script>
+
+{%endblock content%}    
+</body>
+</html>

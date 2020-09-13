@@ -24,9 +24,16 @@ urlpatterns = [
     path('house/', mainapp.views.house, name='house'), #주거 페이지
     path('welfare/', mainapp.views.welfare, name='welfare'), #복지 페이지
     path('post/', mainapp.views.post, name='post'), #세부 페이지
-    path('intro',mainapp.views.intro, name= 'intro'), #소개 페이지
+    path('intro/',mainapp.views.intro, name= 'intro'), #소개 페이지
     path('calendar/', mainapp.views.calendar, name='calendar'), #캘린더 페이지
     path('fi_post_1/', mainapp.views.fi_post_1, name='fi_post_1'), #금융 post 1
-    path('ho_post_1/', mainapp.views.ho_post_1, name='ho_post_1'), #주거 post 1
-    path('wel_post_1/', mainapp.views.wel_post_1, name='wel_post_1'), #복지 post 1
+    
+#==================================================================주거 post
+    path('ho_post_1/', mainapp.views.ho_post_1, name='ho_post_1'),
+    path('ho_post_2/', mainapp.views.ho_post_2, name='ho_post_2'),
+    path('ho_post_3/', mainapp.views.ho_post_3, name='ho_post_3'),
+#==================================================================복지 post
+    path('wel_post_1/', mainapp.views.wel_post_1, name='wel_post_1'),
+    path('wel_post_2/', mainapp.views.wel_post_2, name='wel_post_2'),
+    path('wel_post_3/', mainapp.views.wel_post_3, name='wel_post_3'),
 ]
