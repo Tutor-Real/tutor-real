@@ -303,9 +303,33 @@ a {
     justify-content: space-between;
 }
 
+.title-box h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 8px 10px 38px;
+}
+
 .function-box {
-    margin-top: 60px;
     text-align: right;
+    height: 55px;
+    margin-top: 75px;
+}
+
+/*post - url 복사, views, date*/
+#sh-link {
+    font-size: 13px;
+    border: 1px solid #B2B2B2;
+    border-radius: 5px;
+    padding : 3px 9px;
+}
+.post-value {
+    display: flex;
+    justify-content: space-between;
+    width: 172px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #B2B2B2;
 }
 
 
@@ -313,17 +337,16 @@ a {
 post의 title 형광펜 
 =========================================*/
 
-.title .fi-1-bg {
-    width: 372px;
-} 
+.title .fi-1-bg {width: 372px;} 
 
-.title .ho-1-bg {
-    width: 458px;
-}
+.title .wel-1-bg {width: 403px;}
+.title .wel-2-bg {width: 292px;}
+.title .wel-3-bg {width: 499px;}
 
-.title .wel-1-bg {
-    width: 403px;
-}
+.title .ho-1-bg {width: 458px;}
+.title .ho-2-bg {width: 237px;}
+
+
 
 
 
@@ -331,12 +354,6 @@ post의 title 형광펜
 /*========================================*/
 
 
-
-.title-box h2{
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 8px 10px 38px;
-}
 
 
 /* nav바 적용하면서 추가한 css들*/
@@ -385,13 +402,12 @@ post의 title 형광펜
 
 .post-contents {
     text-align: center;
-    margin-bottom: 180px;
+    margin-bottom: 110px;
 }
 
 .post-logo {
     margin-bottom: 68px;
 }
-
 
 .post-contents .title-box {
     margin-bottom: 20px;
@@ -415,13 +431,12 @@ post의 title 형광펜
 .post-menu a{
     font-weight: 900;
     width: 200px;
-    height: 66px;
+    height: 120px;
     box-shadow: 0px 10px #B2B2B2;
     color:#B2B2B2;
     text-decoration-line: none;
+    padding-top: 60px;
 }
-
-
 
 .post-menu #who{
     box-shadow: 0px 10px #3B48F2;
@@ -494,7 +509,25 @@ post의 title 형광펜
  post 페이지 하단 4개박스 text style
  ==============================
  */
-.post-box1 p{
+.post-box1 .post-table {
+    display: flex;
+}
+
+.blue-box {
+    width : 122px;
+    border-radius: 15px;
+    background-color: #3B48F2;
+    color: #fff;
+    text-align: center;
+    padding: 24px 10px;
+    margin-right: 16px;
+}
+
+.list-box {
+    margin: auto 0px;
+}
+
+ .post-box1 p{
     font-size:18px;
 }
 .post-box1 h2{
@@ -520,13 +553,12 @@ post의 title 형광펜
     font-weight: 900;
 }
 
-
 #highlight {
     background: linear-gradient(to top, #5FFCE7 35%, transparent 35%);
 }
 
-/* hash tag, reference */
 
+/* hash tag, reference */
 
 .ref {
     display: flex;

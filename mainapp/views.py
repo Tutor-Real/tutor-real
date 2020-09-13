@@ -29,11 +29,27 @@ def post(request):
 def fi_post_1(request):
     return render(request, 'fi_post_1.html')
 
+#========================================================house
 def ho_post_1(request):
     return render(request, 'ho_post_1.html')
 
+def ho_post_2(request):
+    return render(request, 'ho_post_2.html')
+
+def ho_post_3(request):
+    return render(request, 'ho_post_3.html')
+
+#========================================================welfare
 def wel_post_1(request):
     return render(request, 'wel_post_1.html')
+
+def wel_post_2(request):
+    return render(request, 'wel_post_2.html')
+
+def wel_post_3(request):
+    return render(request, 'wel_post_3.html')
+    
+#========================================================
 
 def intro(request):
     return render(request, 'intro.html')
