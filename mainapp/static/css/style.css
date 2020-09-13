@@ -641,13 +641,9 @@ post의 title 형광펜
     line-height: 40px;
 }
 
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
+/* ================
+Calendar Styling */
+
 .clearfix::after,
 .calendar ol::after {
   content: ".";
@@ -657,8 +653,6 @@ post의 title 형광펜
   visibility: hidden;
 }
 
-/* ================
-Calendar Styling */
 .calendar {
     border-radius: 10px;
     width: 100%;
@@ -750,5 +744,10 @@ Calendar Styling */
 }
 
 
+/*intro page*/
+
+.intro-page {
+    text-align: center;
+}
 
 /* pull */
