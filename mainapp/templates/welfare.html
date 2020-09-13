@@ -51,32 +51,8 @@
             <hr>
     </header>
 
-    <div class="contents wrapper">
+    <div class="contents wrapper"> <!--위에서부터 추가 (1번째 post가 맨 밑으로 가도록-->
         
-        <!--wel_post_1 : 구직활동지원금-->
-        <div class="item">
-            <a href="{% url 'wel_post_1'%}">
-                <img src="{% static 'img/thumbnail_welfare_1.jpg'%}" class="img">
-                <p class="title">구직활동지원금</p>
-                <div class="explain">
-                    <p>#취준할_돈은_땅에서_솟나요</p>
-                    <p class="date">2020.08.31</p>
-                </div>
-            </a>
-        </div>
-
-        <!--wel_post_2 : 국가장학금-->
-        <div class="item">
-            <a href="{% url 'wel_post_2'%}">
-                <img src="{% static 'img/thumbnail_welfare_2.jpg'%}" class="img">
-                <p class="title">국가장학금</p>
-                <div class="explain">
-                    <p>#나라가_주는_장학금</p>
-                    <p class="date">2020.09.03</p>
-                </div>
-            </a>
-        </div>
-
         <!--wel_post_3 : 국민 내일 배움 카드-->
         <div class="item">
             <a href="{% url 'wel_post_3'%}">
@@ -89,6 +65,30 @@
             </a>
         </div>
 
+
+        <!--wel_post_2 : 국가장학금-->
+        <div class="item">
+            <a href="{% url 'wel_post_2'%}">
+                <img src="{% static 'img/thumbnail_welfare_2.jpg'%}" class="img">
+                <p class="title">국가장학금</p>
+                <div class="explain">
+                    <p>#나라가_주는_장학금</p>
+                    <p class="date">2020.09.03</p>
+                </div>
+            </a>
+        </div>
+        
+        <!--wel_post_1 : 구직활동지원금-->
+        <div class="item">
+            <a href="{% url 'wel_post_1'%}">
+                <img src="{% static 'img/thumbnail_welfare_1.jpg'%}" class="img">
+                <p class="title">구직활동지원금</p>
+                <div class="explain">
+                    <p>#취준할_돈은_땅에서_솟나요</p>
+                    <p class="date">2020.08.28</p>
+                </div>
+            </a>
+        </div>
 
     </div>
 

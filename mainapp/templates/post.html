@@ -1,3 +1,11 @@
+<!--=============================================================================
+=================================================================================\
+
+                             PAGE SAMPLE
+                             
+=================================================================================
+=================================================================================-->
+
 {% extends 'navi.html'%}
 {% load static %}
 <!DOCTYPE html>
@@ -17,10 +25,10 @@
             <div class="post-header">
                 <div class="title-box">
                     <div class="title">
-                        <div class="post-bg"></div>
-                        <a href="#"></a><span>연말정산</span></a>
+                        <div class="wel-1-bg"></div> <!--페이지별 형광펜 길이-->
+                        <span><!--메인제목--></span>
                     </div>
-                    <h2>#13월의 월급, 알바생도 받을 수 있다!</h2>
+                    <h2><!--부제목--></h2>
                 </div>
                 
                 <div class="function-box">
@@ -28,7 +36,7 @@
                     <!--date, 조회순, url복사-->
                     <span id="sh-link">URL 복사</span>
                     <div class="post-value">
-                        <span class="date">📅 2020.00.00  </span>
+                        <span class="date">📅 2020.00.00  </span> <!--날짜수정-->
                         <span class="views">  👀 0000</span>
                     </div>
 
@@ -36,9 +44,9 @@
             
             </div> 
             
-            <div class="post-img"> <!--img로 넣을지 box로 넣을지-->
-                <img src="{% static 'img/post_finance_1.jpg'%}">
-            </div> <!--end img-->
+            <div class="post-img"> <!--post title img-->
+                <img src="{% static 'img/post_welfare_3.jpg'%}"> <!--페이지에 맞는 이미지 넣기-->
+            </div> 
 
             <hr>
 
@@ -50,77 +58,76 @@
 
             <div class="title-box">
                 <div class="title">
-                    <div class="contents-bg"></div>
-                    <span>연말정산</span>
+                    <div class="contents-bg "></div>
+                    <span><!--메인제목--></span>
                 </div>
-                <h2>'13월의 월급'</h2>
+                <h2><!--부제--></h2>
             </div>
-            <p>국세청에서 1년 동안 간이세액표에 따라 거둬들인 근로소득세를 연말에 다시 따져보고,</p>
-            <p>실소득보다 많은 세금을 냈으면 그만큼을 돌려주고 적게 거뒀으면 더 징수한는 절차</p>
+            <p><!--설명--></p>
         </div>
 
         <div class = "postbox-wrapper">
             <div>
                 <div class="post-menu">
-                    <span class="who">신청 자격</span>
-                    <span>신청 방법</span>
-                    <span>기타</span>
-                    <span>Q&A</span>
+                    <a id="who" href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
                 </div>
                 <div class="post-box">
-                    <div class="post-box1">
-                        <p id="one">[신청 자격]</p>
-                        <li id="two">*근로자:알바생 중 일반근로소득자 포함(일용근로소득자 제외)</li>
-                        <li id="three">*일반근로소득:특정 고용주에게 계속 고용되어 지급받는 급여, 근로계약서 상 근로제공에 대한 시간 혹은 일수나 성과에 의하지 않고 월정액에 의하여 급여를 지급받는 경우<br>
-                        *일용근로소득 : 특정 고용주에게 계속 고용되어 있지 않고, 일급이나 시간급 등으로 받는 급여, 급여를 제공한 날이나 시간에 따라 근로 대가를 계산하거나 근로를 제공한 날 혹은 시간의 근로 성과에 따라 급여를 계산하여 지급 / 연말정산 대상에 해당 X, 원천징수로서 납세의무 종결(원납적 원천징수)</li>
-                        <li id="ip">https://blog.naver.com/jegyu2014/221918606222</li>
-                        <li id="four">* 간단 기준 <br>
-                        단기알바, 임시 고용된 일용근로자 혹은 3.3 원천징수하는 사업소득자는 연말정산의 대상이 아닙니다.<br>
-                        4대보험을 지급하고 3개월 이상 근무하며 상용근로자로 등록된 알바라면 소속된 회사를 통해 연말 정산이 가능</li>
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        
                     </div>
                 </div>
             </div>
             <div>
                 <div class="post-menu">
-                    <span>신청 자격</span>
-                    <span class="how">신청 방법</span>
-                    <span>기타</span>
-                    <span>Q&A</span>
+                    <a href="#who">신청 자격</a>
+                    <a id="how" href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
                 </div>
                 <div class="post-box">
-                    <div class="post-box1">
-                        <p id="one">[신청 자격]</p>
-                        <li id="two">* 유형별 이용 안내 동영상 : </li>
-                        <li id="ip">https://www.nts.go.kr/support/support_03.asp?cinfo_key=MINF6620161219171150&menu_a=30&menu_b=500&menu_c=0</li>
-                        <li id="four">* 연말정산 미리보기 : </li>
-                        <li id="ip">https://blog.naver.com/ntscafe/221693269777</li>
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        
                     </div>
                 </div>
             </div>
             <div>
                 <div class="post-menu">
-                    <span >신청 자격</span>
-                    <span>신청 방법</span>
-                    <span class="etc">기타</span>
-                    <span>Q&A</span>
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a id="etc" href="#etc">기타 사항</a>
+                    <a href="#ques">필수 과제</a>
                 </div>
                 <div class="post-box">
-                    <div class="post-box1">
-                        <p id="one">국세청 : https://www.nts.go.kr/</p>
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight(span)/#qna-->
+                        
                     </div>
                 </div>
             </div>
             <div>
                 <div class="post-menu">
-                    <span >신청 자격</span>
-                    <span>신청 방법</span>
-                    <span>기타</span>
-                    <span class="ques">Q&A</span>
+                    <a href="#who">신청 자격</a>
+                    <a href="#how">신청 방법</a>
+                    <a href="#etc">기타 사항</a>
+                    <a id="ques" href="#ques">필수 과제</a>
                 </div>
                 <div class="post-box">
-                    <div class="post-box1">
-                        <p id="one">Q&A : https://m.blog.naver.com/gubgoo/221794824573</p>
+                    <div class="post-box1"> <!--p/h2/#gray/#red/#blue/#min/#highlight-->
+                        <p><span id="qna">Q. </span> </p>
+                        <p><span id="qna">A. </span> </p>
                     </div>
+                </div>
+            </div>
+            <div class="ref">
+                <div class="hash">
+                    <span>#<!--해쉬태그--></span>
+                </div>
+                <div class="reference">
+                    <h2>참고자료</h2>
+                    <p><!--사이트명--></p>
+                    <a href="#" onclick="window.open('#')"><!--사이트 링크--></a>
                 </div>
             </div>
         </div> 
@@ -167,24 +174,6 @@
         } } catch (err) {
             alert('이 브라우저는 지원하지 않습니다.');
             } }); //클립보드 복사
-    </script>
-
-    <!--맨 위로 js-->
-    <script>
-    $(function() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 600) {
-            $('.ScrollButton').fadeIn();
-        } else {
-            $('.ScrollButton').fadeOut();
-        }
-    });
-        
-    $("#TopButton").click(function() {
-        $('html,body').animate({scrollTop:0},600);
-    });
- 
-    }); 
     </script>
 
     <!--맨 위로 가기 버튼 js-->
