@@ -15,8 +15,10 @@
 
             <div class="contents-header"> 
                 <div class="title">
-                    <div class="sub-bg"></div>
-                    <a href="#"></a><span>금융 💸</span></a>
+                    <div class="search-bg">
+                        <span>"{{ q }}"에 대해서 궁금하다면...? 🤔&nbsp;</span>
+                    </div>
+
                 </div>
 
                 <div id="sort" class="wrapper">
@@ -53,19 +55,31 @@
 
     </header>
 
-    <div class="contents wrapper">
-        <div class="item">
-            <a href="{% url 'fi_post_1'%}">
-             <!--해당 컨텐츠 세부페이지로 이동-->
-                <img src="{% static 'img/thumbnail_finance_1.jpg'%}"  class="img">
-                <p class="title">햇살론 Youth</p>
+    {% if not blogs %}
+        <h4 style="text-align :center ">검색 결과가 없습니다</h4>
+
+    {% else %}
+        {% for blog in blogs.all %}
+
+        <div class="contents wrapper">
+            <div class="item">
+                <a href="{% url ''%}">
+                <!--해당 컨텐츠 세부페이지로 이동-->
+                <p class="title">{{ blog.title }}</p>
                 <div class="explain">
-                    <p>#지원은내가할게_사회진출은_누가할래?</p>
-                    <p class="date">2020.08.27</p>
+                    <p>{{ blog.tag }}</p>
+                    <p class="date">{{ blog.date }}</p>
                 </div>
-            </a>
-        </div>        
-    </div>
+                </a>
+            </div>        
+        </div>
+        <br>
+        {% endfor %}
+    {% endif %}
+
+
+
+    
 
 
 
@@ -73,6 +87,6 @@
 
     </footer>
 
-{%endblock content%}
+{% endblock content %}
 </body>
 </html>

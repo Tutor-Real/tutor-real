@@ -75,20 +75,29 @@ class AuthUserUserPermissions(models.Model):
 
 
 class Contents(models.Model):
+    objects = models.Manager()
     content_pk = models.AutoField(primary_key=True)
     title = models.CharField(max_length=45)
     date = models.DateTimeField()
     host = models.CharField(max_length=45, blank=True, null=True)
-    view = models.IntegerField()
+    view = models.PositiveIntegerField(default=0)
     tag = models.CharField(max_length=45, blank=True, null=True)
     startdate = models.DateField(blank=True, null=True)
     enddate = models.DateField(blank=True, null=True)
     img = models.TextField(blank=True, null=True)
     category = models.CharField(max_length=10, blank=True, null=True)
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         managed = False
         db_table = 'contents'
+
+    @property
+    def update_counter(self):
+        self.view = self.view + 1
+        self.save()
 
 
 class DjangoAdminLog(models.Model):

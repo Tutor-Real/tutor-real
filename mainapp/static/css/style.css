@@ -750,4 +750,19 @@ Calendar Styling */
     text-align: center;
 }
 
+/* search page */
+
+.search-bg span{
+    top: -32px;
+    font-weight: 900;
+    font-size: 3.75rem;
+    letter-spacing: 0px;
+    color: #3B48F2;
+    margin-left: 8px;
+    position: relative;
+}
+.title .search-bg {
+    background-color: #5ffce7;
+}
+
 /* pull */
