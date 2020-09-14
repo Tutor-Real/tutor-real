@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import sys
 from oauth2client import client
 from googleapiclient import sample_tools
-from django.db.models import *
+from .models import Contents
 # pip install google-api-python-client
 # pip install oauth2client
 
@@ -27,7 +27,8 @@ def post(request):
     return render(request, 'post.html')
 
 def fi_post_1(request):
-    return render(request, 'fi_post_1.html')
+    views = Contents.objects.filter(content_pk=3)
+    return render(request, 'fi_post_1.html', {'view_count':views})
 
 #========================================================house
 def ho_post_1(request):
@@ -56,3 +57,14 @@ def intro(request):
 
 def calendar(request):
     return render(request, 'calendar.html')
+
+def search(request):
+    blogs = Contents.objects.all()
+
+    q = request.POST.get('q', "")
+
+    if q:
+        blogs = blogs.filter(title__icontains=q)
+        return render(request, 'search.html', {'blogs' : blogs, 'q' : q})
+    else:
+        return render(request, 'search.html')

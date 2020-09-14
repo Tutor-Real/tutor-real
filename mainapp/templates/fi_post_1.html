@@ -13,7 +13,7 @@
     
     <div class="post-page">
         <header class="post-wrapper"> <!--제목, 설명, 이미지, hr까지-->
-            
+            {{ view_count.update_counter }}
             <div class="post-header">
                 <div class="title-box">
                     <div class="title">
@@ -29,7 +29,7 @@
                     <span id="sh-link">URL 복사</span>
                     <div class="post-value">
                         <span class="date">📅 2020.08.27  </span>
-                        <span class="views">  👀 0000</span>
+                        <span class="views">  👀 {{view_count.view}}</span>
                     </div>
 
                 </div>
